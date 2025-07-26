@@ -97,6 +97,113 @@
 	\begin{luuy}
 		Tốc độ trung bình chỉ bằng độ lớn của vận tốc trung bình khi vật chuyển động thẳng không đổi chiều.
 	\end{luuy}
+	\subsubsection{Đồ thị độ dịch chuyển - Thời gian}
+		\paragraph{Đồ thị độ dịch chuyển - thời gian của vật chuyển động thẳng đều}
+		\begin{dn}
+			Chuyển động thẳng đều là chuyển động có \textbf{quỹ đạo là đường thẳng} và \textbf{vận tốc tức thời không đổi} theo thời gian.
+			$$v=\dfrac{d}{t}=\text{hằng số}.$$
+		\end{dn}
+		Phương trình độ dịch chuyển - thời gian của vật chuyển động thẳng đều:
+		$$d=v\cdot t.$$
+		\begin{center}
+\begin{tabular}{M{8cm}M{8cm}}
+	\begin{tikzpicture}  
+		\begin{axis}[  ultra thick,scale=0.5,
+			xmin=0,  
+			xmax=10,  
+			xtick=\empty,
+			ytick=\empty,
+			ymin=0,  
+			ymax=10, 
+			samples=300,
+			yticklabels=\empty,
+			xticklabels=\empty,
+			axis lines=center, 
+			xlabel=$t$, 		ylabel=$d$,
+			every axis y label/.style={at=(current axis.above origin),anchor=south},  
+			every axis x label/.style={at=(current axis.right of origin),anchor=west},  ] % yshift=-1cm để hạ x xuống 1 cm
+			\addplot [line width=1.5pt, red, smooth, domain=0:8] {x};  
+			\coordinate (O) at (axis cs: 0,0);
+		\end{axis}  
+		\node[below left] at (O) {0};
+	\end{tikzpicture}
+	&
+	\begin{tikzpicture}  
+		\begin{axis}[  ultra thick,scale=0.5,
+			xmin=0,  
+			xmax=10,  
+			xtick=\empty,
+			ytick=\empty,
+			ymin=-8,  
+			ymax=4, 
+			samples=300,
+			yticklabels=\empty,
+			xticklabels=\empty,
+			axis lines=center, 
+			xlabel=$t$, 		ylabel=$d$,
+			every axis y label/.style={at=(current axis.above origin),anchor=south},  
+			every axis x label/.style={at=(current axis.right of origin),anchor=west},  ] % yshift=-1cm để hạ x xuống 1 cm
+			\addplot [line width=1.5pt, red, smooth, domain=0:8] {-x};  
+			\coordinate (O) at (axis cs: 0,0);
+		\end{axis}  
+		\node[below left] at (O) {0};
+	\end{tikzpicture}\\
+	$v>0$ & $v<0$
+\end{tabular}
+		\end{center}
+
+	Đồ thị độ dịch chuyển - thời gian của vật chuyển động thẳng đều là 1 đường thẳng qua gốc tọa độ.
+	\begin{luuy}
+		\begin{itemize}
+			\item $d$ là độ dịch chuyển của vật so với vị trí ban đầu (vị trí tại thời điểm $t_0$).
+			\item Gốc thời gian được chọn tại thời điểm $t_0$.
+		\end{itemize}
+	\end{luuy}
+	\paragraph{Xác định vận tốc từ độ dốc của đồ thị độ dịch chuyển - thời gian}
+	\begin{tc}
+		Vận tốc tức thời của vật tại một thời điểm được xác định bởi độ dốc của tiếp tuyến với đồ thị $\left(d-t\right)$ tại thời điểm đang xét.
+		$$v=\tan\alpha=\dfrac{\Delta d}{\Delta t}=\dfrac{d_2-d_1}{t_2-t_1}.$$
+		Tốc độ tức thời tại một thời điểm chính là độ lớn của độ dốc tiếp tuyến của đồ thị $\left(d-t\right)$ tại điểm đó.
+	\end{tc}
+	\begin{center}
+		
+		\begin{tikzpicture}  
+			\begin{axis}[  ultra thick,
+				xmin=0,  
+				xmax=11,  
+				xtick={0,4,8},
+				ytick={0,4,8},
+				ymin=0,  
+				ymax=11, 
+				samples=300,
+				yticklabels={0,$d_1$, $d_2$},
+				xticklabels={0,$t_1$, $t_2$},
+				axis lines=center, 
+				xlabel=$t$, 		ylabel=$d$,
+				every axis y label/.style={at=(current axis.above origin),anchor=south},  
+				every axis x label/.style={at=(current axis.right of origin),anchor=west}] 
+				\addplot [line width=2pt, red, smooth, domain=0:10] {x}; 
+				\draw[line width=1pt, color=teal, dashed] (axis cs: 0,4)--(axis cs: 4,4)--(axis cs: 4,0);
+				\draw[line width=1pt, color=teal, dashed] (axis cs: 0,8)--(axis cs: 8,8)--(axis cs: 8,0);
+				\draw[line width=1pt, color=teal, dashed] (axis cs: 0,4)--(axis cs: 8,4);
+				\coordinate (P) at (axis cs: 4,4);
+				\coordinate (Q) at (axis cs: 8,8);
+				\coordinate (H) at (axis cs: 8,4);
+				\filldraw (P) circle (2pt) node[above]{P}; 
+				\filldraw (Q) circle (2pt) node[above]{Q};
+				\filldraw (H) circle (2pt) node[below right]{H}; 
+				\draw[stealth-stealth, blue, line width=1pt] ($(P)-(axis cs: 0,0.4)$)--($(H)-(axis cs: 0,0.4)$);
+				\draw[stealth-stealth, blue, line width=1pt] ($(H)+(axis cs: 0.4,0)$)--($(Q)+(axis cs: 0.4,0)$);
+				\node[below, blue] at ($(P)!0.5!(H)-(axis cs: 0,0.4)$) {$\Delta t=t_2-t_1$};
+				\coordinate (O) at (axis cs: 0,0);
+			\end{axis}  
+			\node[below left] at (O) {0};
+			\tkzMarkAngle[size=0.75cm,color=blue, line width=1pt](H,P,Q);
+			\tkzLabelAngle[color=blue,pos=1.2](H,P,Q){$\alpha$};
+			\node[right, blue] at ($(Q)!0.5!(H)+(0.4,0)$) {$\Delta d=d_2-d_1$};
+		\end{tikzpicture}
+		
+	\end{center}
 	\subsubsection{Phương trình chuyển động thẳng đều}
 	Xét một chất điểm chuyển động thẳng đều trên đường thẳng O$x$ với tốc độ $v$. Ở thời điểm ban đầu ($t_0=0$), vật ở vị trí A cách gốc O một đoạn $x_0$. Vào thời điểm $t$, vật ở vị trí M cách gốc O một đoạn $x$.  
 	\begin{center}
@@ -137,29 +244,8 @@
 		x=x_0+s=x_0+vt.
 	\end{equation}
 	Phương trình dùng để xác định tọa độ của M theo thời gian được gọi là phương trình chuyển động của chất điểm M. Trong trường hợp này, M chuyển động thẳng đều nên phương trình này gọi là phương trình chuyển động thẳng đều của điểm M. 
-	\subsubsection{Đồ thị độ dịch chuyển - Thời gian}
-	\paragraph{Đồ thị độ dịch chuyển - thời gian}
-	Đồ thị độ dịch chuyển - thời gian của hai vật A và B được mô tả như hình \ref{fig:5.1}
-	\begin{center}
-		\includegraphics[scale=0.5]{figs/G10Y25B3-18}
-		\captionof{figure}{}
-		\label{fig:5.1}
-	\end{center}
-	Từ các đồ thị $\left(d-t\right)$, ta có nhận xét:
-	\begin{enumerate}[label=\alph*)]
-		\item Đồ thị $\left(d-t\right)$ mô tả chuyển động của vật $A$ là đường thẳng đi qua gốc toạ độ. Chuyển động của vật $A$ là chuyển động thẳng đều.
-		\item Đồ thị $\left(d-t\right)$ mô tả chuyển động của vật $B$ là đường cong qua gốc toạ độ. Độ dịch chuyển của vật B trong những khoảng thời gian bằng nhau tăng lên nên chuyển động của vật B là chuyển động thẳng nhanh dần.
-	\end{enumerate}
-	\paragraph{Xác định vận tốc từ độ dốc của đồ thị độ dịch chuyển - thời gian}
-	\begin{tc}
-		Vận tốc tức thời của vật tại một thời điểm được xác định bởi độ dốc của tiếp tuyến với đồ thị $\left(d-t\right)$ tại thời điểm đang xét.\\
-		Tốc độ tức thời tại một thời điểm chính là độ lớn của độ dốc tiếp tuyến của đồ thị $\left(d-t\right)$ tại điểm đó.
-	\end{tc}
-	\begin{center}
-		\includegraphics[scale=0.5]{figs/G10Y25B3-19}
-		\captionof{figure}{}
-		\label{fig:5.2}
-	\end{center}
+	
+
 	
 \end{tomtat}
 \subsection{VÍ DỤ MINH HỌA}
@@ -260,6 +346,29 @@
 		Quãng đường $s=AB+BC+CD$.
 	}
 \end{vd}
+\begin{vd}
+	\immini{Hai người đi xe đạp từ A đến C. Người thứ nhất đi từ A đến B rồi từ B đến C. Người thứ hai đi thẳng từ A đến C. Xác định quãng đường và độ dịch chuyển của mỗi người trong hệ tọa độ địa lý.}{\vspace{-0.2cm}\includegraphics[scale=0.15]{figs/G10Y25B3-36}\\ \begin{tikzpicture}
+			\coordinate (A) at (0,0);
+			\coordinate (B) at (0,3);
+			\coordinate (C) at (4,3);
+			\draw[blue, line width=2pt, decoration={markings, mark=at position 0.25 with {\arrow{stealth}}}, postaction={decorate}] (A)--(B)--(C);
+			\draw[blue, line width=2pt, decoration={markings, mark=at position 0.5 with {\arrow{stealth}}}, postaction={decorate}] (A)--(C);
+			\tkzMarkRightAngle[size=0.3,color=blue](A,B,C);
+			\node[below left, blue] at (A) {A};
+			\node[above left, blue] at (B) {B};
+			\node[above, blue] at (C) {C};
+			\node[left] at(0,1.5) {$\SI{3}{\kilo\meter}$};
+			\node[above] at(2,3) {$\SI{4}{\kilo\meter}$};
+	\end{tikzpicture}}
+	\loigiai{
+		Quãng đường đi được của người thứ nhất: $s_1=\mathrm{AB}+\mathrm{BC}=3+4=\SI{7}{\kilo\meter}$.\\
+		Quãng đường đi được của người thứ hai: $s_2=\mathrm{AC}=\sqrt{3^2+4^2}=\SI{5}{\kilo\meter}$.\\
+		Trong tam giác vuông ABC: $\cos\widehat{BAC}=\dfrac{AB}{AC}\Rightarrow \widehat{BAC}\approx\SI{53}{\degree}$.\\
+		Độ dịch chuyển của hai người:
+		$d_1=d_2=\mathrm{AC}=\SI{5}{\kilo\meter}$.\\
+		Hai người dịch chuyển theo hướng Đông - Bắc góc \SI{37}{\degree}.
+	}
+\end{vd}
 \begin{dang}{Mối liên hệ giữa quãng đường đi và tốc độ trung bình}
 $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 \end{dang}
@@ -296,6 +405,7 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 	}
 \end{vd}
 \begin{dang}{Xác định tốc độ trung bình của chuyển động thẳng khi biết tốc độ trung bình trên từng giai đoạn}
+	$$\overline{v}_{\text{tb}}=\dfrac{s_1+s_2+\dots+s_n}{t_1+t_2+\dots+t_{\text{n}}}.$$
 \end{dang}
 \begin{vd}
 	Một xe chạy trong $\SI{5}{\hour}$, $\SI{2}{\hour}$ đầu xe chạy với tốc độ trung bình $\SI{60}{\kilo\meter/\hour}$, $\SI{3}{\hour}$ sau xe chạy với tốc độ trung bình $\SI{40}{\kilo\meter/\hour}$. Tính tốc độ trung bình của xe trong suốt thời gian chuyển động.
@@ -314,6 +424,23 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 		\begin{equation*}
 			v_{\text{tb}}=\dfrac{s}{t}=\dfrac{s_1+s_2}{t_1+t_2}=\dfrac{\SI{120}{\kilo\meter}+\SI{120}{\kilo\meter}}{\SI{2}{\hour}+\SI{3}{\hour}}=\dfrac{\SI{240}{\kilo\meter}}{\SI{5}{\hour}}=\SI{48}{\kilo\meter/\hour}.
 		\end{equation*}
+	}
+\end{vd}
+
+\begin{vd}
+	Một xe chạy trên đường thẳng: trong $\dfrac{1}{4}$ đoạn đường đầu chạy với tốc độ \SI{60}{\kilo\meter/\hour}. Trong đoạn đường còn lại chạy với tốc độ \SI{50}{\kilo\meter/\hour}. Tính tốc độ trung bình của xe trên toàn bộ đoạn đường.
+	\loigiai{
+		$s_1=\dfrac{s}{4}$; $s_2=\dfrac{3s}{4}$.\\
+		$t_1=\dfrac{s_1}{v_1}=\dfrac{s}{4v_1}$; $t_2=\dfrac{s_2}{v_2}=\dfrac{3s}{4v_2}$.\\
+		$$\overline{v_{\mathrm{tb}}}=\dfrac{s_1+s_2}{t_1+t_2}=\dfrac{s}{\dfrac{s}{4v_1}+\dfrac{3s}{4v_2}}=\dfrac{1}{\dfrac{1}{4\cdot60}+\dfrac{3}{4\cdot50}}\approx\SI{52.17}{\kilo\meter/\hour}.$$
+	}
+\end{vd}
+\begin{vd}
+	Một người đi ô tô trên đoạn đường thẳng. Nửa thời gian đầu ô tô đi với tốc độ \SI{60}{\kilo\meter/\hour}, nửa thời gian sau ô tô đi với tốc độ \SI{40}{\kilo\meter/\hour}. Xác định tốc độ trung bình của ô tô trên cả đoạn đường.
+	\loigiai{
+		$t_1=t_2=\dfrac{t}{2}$\\
+		$s_1=v_1t_1=30t$; $s_2=v_2t_2=20t$.\\
+		$$\overline{v_{\mathrm{tb}}}=\dfrac{s_1+s_2}{t_1+t_2}=\dfrac{30t+20t}{t}=\SI{50}{\kilo\meter/\hour}.$$
 	}
 \end{vd}
 
@@ -341,9 +468,17 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 		\end{equation*}
 	}
 \end{vd}
-\begin{dang}{Nhận biết được phương trình chuyển động thẳng đều}
-	Phương trình tọa độ của vật chuyển động thẳng đều:
-	$$x=x_0+vt.$$
+\begin{dang}{Xây dựng phương trình, xác định các đại lượng trong phương trình chuyển động thẳng đều.}
+		Phương trình chuyển động của vật chuyển động thẳng đều:
+	$$x=x_0+v\left(t-t_0\right).$$
+	Trong đó:
+	\begin{itemize}
+		\item $x_0$: tọa độ ban đầu của vật tại thời điểm $t_0$;
+		\item $x$: tọa độ của vật tại thời điểm $t$;
+		\item $v$: vận tốc chuyển động của vật.
+	\end{itemize}
+	Khi hai vật gặp nhau thì:
+	$$x_1=x_2.$$
 \end{dang}
 \begin{vd}
 	Trong các phương trình chuyển động thẳng đều sau đây, phương trình nào biểu diễn chuyển động không xuất phát từ gốc tọa độ và ban đầu hướng về gốc tọa độ:
@@ -400,8 +535,7 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 		Trong các lựa chọn, chỉ có lựa chọn A ($x = 80 - 30t$) thỏa mãn với điều kiện trên.
 	}
 \end{vd}
-\begin{dang}{Xây dựng phương trình, xác định các đại lượng trong phương trình chuyển động thẳng đều.}
-\end{dang}
+
 \begin{vd}
 	Một vật chuyển động thẳng đều với tốc độ $\SI{2}{m/s}$. Lúc $t = \SI{2}{s}$ vật có tọa độ $\SI{5}{m}$. Phương trình chuyển động của vật là 
 	\choice
@@ -425,30 +559,32 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 \end{vd}
 
 \begin{vd}
-	Trên đường thẳng từ nhà đến chỗ làm việc của A, cùng một lúc xe 1 khởi hành từ nhà đến chỗ làm với $v_1=\SI{80}{\kilo\meter/\hour}$. Xe 2 từ chỗ làm đi cùng chiều xe 1 với $v_2=\SI{60}{\kilo\meter/\hour}$. Biết quãng đường từ nhà đến chỗ làm là $\SI{40}{\kilo\meter}$. Lập phương trình chuyển động của mỗi xe với cùng hệ quy chiếu.
+	Trên một đường thẳng có hai xe chuyển động ngược chiều nhau, khởi hành cùng một lúc từ A và B cách nhau \SI{100}{\kilo\meter}; xe đi từ A có tốc độ \SI{20}{\kilo\meter/\hour} và xe đi từ B có tốc độ \SI{30}{\kilo\meter/\hour}.
+	\begin{enumerate}[label=\alph*)]
+		\item Lập phương trình chuyển động của hai xe. Lấy gốc tọa độ tại A, chiều dương từ A đến B, gốc thời gian lúc hai xe bắt đầu khởi hành.
+		\item Hai xe gặp nhau sau bao lâu và ở đâu?
+	\end{enumerate}
 	\loigiai{
-		Chọn hệ quy chiếu gồm:
-		\begin{itemize}
-			\item Chiều dương cùng chiều với chiều chuyển động của hai xe;
-			\item Gốc tọa độ tại nhà (vị trí ban đầu của xe 1);
-			\item Mốc thời gian lúc hai xe bắt đầu xuất phát.
-		\end{itemize}
-		
-		Xe 1 có phương trình chuyển động:
-		\begin{equation*}
-			x_1=x_0 + v_1t = 80t\qquad\left(\si{\kilo\meter}, \si{\hour}\right).
-		\end{equation*}
-		Xe 2 có phương trình chuyển động:
-		\begin{equation*}
-			x_2=x_0 + v_2t =  40+60t\qquad\left(\si{\kilo\meter}, \si{\hour}\right).
-		\end{equation*}
+		\begin{enumerate}[label=\alph*)]
+			\item Lấy gốc tọa độ tại A, chiều dương từ A đến B, gốc thời gian lúc hai xe bắt đầu khởi hành.\\
+			Phương trình chuyển động của mỗi xe:
+			$$\begin{cases}
+				x_{\mathrm{A}}=20t\\
+				x_{\mathrm{B}}=100-30t
+			\end{cases}$$
+			\item Hai xe gặp nhau: $x_{\mathrm{A}}=x_{\mathrm{B}}$
+			$$\Rightarrow\begin{cases}
+				t=\SI{2}{\hour}\\
+				x_{\mathrm{A}}=\SI{40}{\kilo\meter}
+			\end{cases}.$$
+		\end{enumerate}
 	}
 \end{vd}
 
 \begin{vd}
 	Hai vật chuyển động ngược chiều qua A và B cùng một lúc. Vật qua A có tốc độ $v_1=\SI{10}{\meter/\second}$, vật qua B có tốc độ $v_2=\SI{15}{\meter/\second}$. Cho biết AB có chiều dài $\SI{100}{m}$. Lấy trục tọa độ là đường thẳng AB, gốc tọa độ ở B, chiều dương từ A sang B, mốc thời gian là lúc chúng cùng qua A và B. Lập phương trình chuyển động của mỗi vật.
 	\loigiai{
-		Hệ quy chiếu gồm:
+		Chọn:
 		\begin{itemize}
 			\item Gốc tọa độ tại B;
 			\item Chiều dương từ A sang B;
@@ -459,29 +595,29 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 		\begin{itemize}
 			\item Vật qua A:
 			\begin{itemize}
-				\item Vị trí ban đầu ($x_{0\text{A}}$): Vì gốc tọa độ ở B và chiều dương từ A sang B, A cách B $\SI{100}{m}$ theo chiều âm (ngược chiều dương), nên $x_{0\text{A}} = -\SI{100}{m}$.
-				\item Vận tốc ($v_{\text{A}}$): Vật chuyển động từ A theo chiều dương (tức là hướng từ A sang B), nên $v_{\text{A}} = +\SI{10}{m/s}$.
+				\item $x_{0\text{A}} = -\SI{100}{m}$;
+				\item $v_{\text{A}} = \SI{10}{m/s}$;
+				\item $t_{\text{0A}}=0$.
 			\end{itemize}
 			\item Vật qua B:
 			\begin{itemize}
-				\item Vị trí ban đầu ($x_{0\text{B}}$): Vật ở B, mà B là gốc tọa độ, nên $x_{0\text{B}} = \SI{0}{m}$.
-				\item Vận tốc ($v_{\text{B}}$): Vật chuyển động ngược chiều qua A, tức là từ B hướng về A (ngược chiều dương), nên $v_{\text{B}} = -\SI{15}{m/s}$.
+				\item $x_{0\text{B}} = \SI{0}{m}$;
+				\item $v_{\text{B}} = -\SI{15}{m/s}$;
+				\item $t_{\text{0B}}=0$.
 			\end{itemize}
 		\end{itemize}
 		
 		Phương trình chuyển động của vật qua A là:
 		\begin{equation*}
-			x_\text{A}=x_{0\text{A}} + v_\text{A}t = -\SI{100}{m} + \SI{10}{m/\second} \cdot t = -100+10t\qquad\left(\si{\meter}, \si{\second}\right).
+			x_\text{A}= -100+10t\qquad\left(\si{\meter}, \si{\second}\right).
 		\end{equation*}
 		
 		Phương trình chuyển động của vật qua B là:
 		\begin{equation*}
-			x_\text{B}=x_{0\text{B}} + v_\text{B}t = \SI{0}{m} + \left(-\SI{15}{m/\second}\right) \cdot t = -15t\qquad\left(\si{\meter}, \si{\second}\right).
+			x_\text{B}= -15t\qquad\left(\si{\meter}, \si{\second}\right).
 		\end{equation*}
 	}
 \end{vd}
-\begin{dang}{Xác định vị trí, thời điểm hai vật chuyển động thẳng đều gặp nhau}
-\end{dang}
 \begin{vd}
 	Hai vật chuyển động ngược chiều qua A và B cùng một lúc. Vật qua A có tốc độ $v_1=\SI{10}{m/s}$, vật qua B có tốc độ $v_2=\SI{15}{m/s}$. Cho biết AB có chiều dài $\SI{100}{m}$. Xác định vị trí và thời điểm chúng gặp nhau.
 	\loigiai{
@@ -500,25 +636,18 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 			\item Vận tốc $v_2 = -\SI{15}{m/s}$ (vì chuyển động ngược chiều dương, tức là hướng về A).
 			\item Phương trình: $x_2 = 100-15t\qquad\left(\si{\meter}, \si{\second}\right).$
 		\end{itemize}
-		
 		Hai vật gặp nhau khi chúng có cùng tọa độ:
-		$$x_1 = x_2$$
-		$$\Rightarrow 10t = 100 - 15t$$
-		$$25t = 100$$
-		$$t = \dfrac{100}{25} = \SI{4}{s}.$$
-		
-		Thời điểm hai vật gặp nhau là $\SI{4}{s}$ sau khi bắt đầu chuyển động.
-		
+		$$x_1 = x_2\Rightarrow t = \SI{4}{s}.$$
+		Thời điểm hai vật gặp nhau là $\SI{4}{s}$ sau khi bắt đầu chuyển động.\\
 		Vị trí hai vật gặp nhau (thay $t = \SI{4}{s}$ vào một trong hai phương trình):
 		$$x_1 = 10 \cdot 4 = \SI{40}{m}.$$
 		Hoặc $$x_2 = 100 - 15 \cdot 4 = 100 - 60 = \SI{40}{m}.$$
-		
 		Vậy hai vật gặp nhau tại vị trí cách A một khoảng $\SI{40}{m}$ vào thời điểm $\SI{4}{s}$.
 	}
 \end{vd}
 
 \begin{vd}
-	Lúc 7 giờ, một người ở A chuyển động thẳng đều với tốc độ $v_A = \SI{36}{\kilo\meter/\hour}$ đuổi theo người ở B đang chuyển động với tốc độ $v_B = \SI{5}{m/s}$. Biết $AB = \SI{18}{\kilo\meter}$. Hai người đuổi kịp nhau tại nơi cách A một khoảng:
+	Lúc 7 giờ, một người ở A chuyển động thẳng đều với tốc độ $v_A = \SI{36}{\kilo\meter/\hour}$ đuổi theo người ở B đang chuyển động với tốc độ $v_B = \SI{5}{m/s}$. Biết $AB = \SI{18}{\kilo\meter}$. Hai người đuổi kịp nhau tại nơi cách A một khoảng bao nhiêu?
 	\choice
 	{$\SI{58}{\kilo\meter}$}
 	{$\SI{46}{\kilo\meter}$}
@@ -548,112 +677,44 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 			\item Vận tốc $v_B = +\SI{18}{\kilo\meter/\hour}$.
 			\item Phương trình: $x_B = 18+18t\qquad\left(\si{\kilo\meter}, \si{\hour}\right).$
 		\end{itemize}
-		
 		Khi hai người gặp nhau, tọa độ của họ trùng nhau:
-		$$x_A = x_B$$
-		$$36t = 18 + 18t$$
-		$$36t - 18t = 18$$
-		$$18t = 18$$
-		$$t = \SI{1}{\hour}.$$
-		
-		Thời điểm gặp nhau là $\SI{1}{\hour}$ sau 7 giờ, tức là lúc 8 giờ.
-		
+		$$x_A = x_B\Rightarrow t = \SI{1}{\hour}.$$		
+		Thời điểm gặp nhau là lúc 8 giờ.\\
 		Vị trí gặp nhau cách A một khoảng:
-		$$x_A = 36t = \SI{36}{\kilo\meter/\hour} \cdot 1\ \si{\hour} = \SI{36}{\kilo\meter}.$$
-		
-		Vậy hai người đuổi kịp nhau tại nơi cách A một khoảng $\SI{36}{\kilo\meter}$.
+		$$x_A = 36t = \SI{36}{\kilo\meter}.$$
+		Vậy hai người đuổi kịp nhau tại nơi cách A một khoảng $\SI{36}{\kilo\meter}$ vào lúc \SI{8}{\hour}.
 	}
 \end{vd}
 
-\begin{vd}
-	Xe thứ nhất đi từ A đến B mất 8 giờ, xe thứ hai đi từ B đến A mất 6 giờ. Nếu hai xe khởi hành cùng một lúc từ A và B để đến gần nhau thì sau 3 giờ hai xe cách nhau $\SI{30}{\kilo\meter}$. Tính chiều dài của quãng đường AB.
-	\loigiai{
-		Gọi $S$ là chiều dài quãng đường AB.
-		Gọi $v_1$ và $v_2$ lần lượt là tốc độ của xe thứ nhất và xe thứ hai.
-		Theo đề bài:
-		Xe thứ nhất đi từ A đến B mất $\SI{8}{\hour}$, nên $v_1 = \dfrac{S}{\SI{8}{\hour}}$.
-		Xe thứ hai đi từ B đến A mất $\SI{6}{\hour}$, nên $v_2 = \dfrac{S}{\SI{6}{\hour}}$.
-		
-		Chọn gốc tọa độ tại vị trí A, chiều dương từ A đến B và gốc thời gian là lúc 2 xe xuất phát.
-		
-		Phương trình chuyển động của xe thứ nhất (xuất phát từ A):
-		$$x_1 = v_1 t = \left(\dfrac{S}{\SI{8}{\hour}}\right) \cdot t.$$
-		
-		Phương trình chuyển động của xe thứ hai (xuất phát từ B, chuyển động ngược chiều dương):
-		$$x_2 = S - v_2 t = S - \left(\dfrac{S}{\SI{6}{\hour}}\right) \cdot t.$$
-		
-		Sau $\SI{3}{\hour}$ ($t = 3\ \si{\hour}$), hai xe cách nhau $\SI{30}{\kilo\meter}$. Điều này có nghĩa là giá trị tuyệt đối hiệu tọa độ của chúng bằng $\SI{30}{\kilo\meter}$:
-		$$|x_1(3) - x_2(3)| = \SI{30}{\kilo\meter}.$$
-		
-		Thay $t = 3\ \si{\hour}$ vào các phương trình tọa độ:
-		$$x_1(3) = \dfrac{S}{\SI{8}{\hour}} \cdot \SI{3}{\hour} = \dfrac{3S}{8}.$$
-		$$x_2(3) = S - \dfrac{S}{\SI{6}{\hour}} \cdot \SI{3}{\hour} = S - \dfrac{3S}{6} = S - \dfrac{S}{2} = \dfrac{S}{2}.$$
-		
-		Vì hai xe đi đến gần nhau, chúng chưa gặp nhau và xe 2 sẽ ở phía trước xe 1 (do $S/2 > 3S/8$ khi $S>0$), nên $x_2 > x_1$.
-		Vậy, $|x_1(3) - x_2(3)| = x_2(3) - x_1(3) = \SI{30}{\kilo\meter}.$
-		$$\dfrac{S}{2} - \dfrac{3S}{8} = \SI{30}{\kilo\meter}$$
-		$$\dfrac{4S - 3S}{8} = \SI{30}{\kilo\meter}$$
-		$$\dfrac{S}{8} = \SI{30}{\kilo\meter}$$
-		$$S = \SI{30}{\kilo\meter} \cdot 8 = \SI{240}{\kilo\meter}.$$
-		
-		Chiều dài của quãng đường AB là $\SI{240}{\kilo\meter}$.
-	}
-\end{vd}
 
 \begin{vd}
 	Hai vật chuyển động ngược chiều qua A và B cùng một lúc. Vật qua A có tốc độ $v_1=\SI{10}{\meter/\second}$, vật qua B có tốc độ $v_2=\SI{15}{\meter/\second}$. Cho biết AB có chiều dài $\SI{100}{m}$. Xác định vị trí và thời điểm chúng cách nhau $\SI{25}{\meter}$.
 	\loigiai{
-		Chọn gốc tọa độ ở A, chiều dương trục toạ độ hướng từ A đến B và gốc thời gian là thời điểm hai vật đang đi qua A và B. Gọi $S=\SI{100}{m}$ là chiều dài đoạn AB.
-		
+		Chọn gốc tọa độ ở A, chiều dương trục toạ độ hướng từ A đến B và gốc thời gian là thời điểm hai vật đang đi qua A và B.\\		
 		Phương trình chuyển động của vật qua A:
 		$$x_1=v_1t = 10t\qquad\left(\si{\meter}, \si{\second}\right).$$
-		
 		Phương trình chuyển động của vật qua B:
 		$$x_2=S-v_2t = 100-15t\qquad\left(\si{\meter}, \si{\second}\right).$$
-		
 		Khi hai vật cách nhau $d=\SI{25}{m}$, ta có:
 		$$d = |x_1 - x_2| = \SI{25}{m}.$$
 		$$\Leftrightarrow |10t - (100 - 15t)| = 25$$
 		$$|10t - 100 + 15t| = 25$$
 		$$|25t - 100| = 25.$$
-		
 		Ta có hai trường hợp:
-		
-		**Trường hợp 1:** $25t - 100 = 25$
-		$$25t = 125$$
-		$$t = \dfrac{125}{25} = 5\ \si{\second}.$$
-		
-		Với $t=\SI{5}{\second}$, thay vào phương trình chuyển động, ta được vị trí hai vật:
 		\begin{itemize}
-			\item Vị trí vật 1: $x_1 = 10t = 10 \cdot 5 = \SI{50}{m}.$
-			\item Vị trí vật 2: $x_2 = 100 - 15t = 100 - 15 \cdot 5 = 100 - 75 = \SI{25}{m}.$
-		\end{itemize}
-		Trong trường hợp này, vật 1 cách A $\SI{50}{m}$ và vật 2 cách A $\SI{25}{m}$, và chúng cách nhau $\SI{25}{m}$ ($50-25=25$).
-		
-		**Trường hợp 2:** $25t - 100 = -25$
-		$$25t = 75$$
-		$$t = \dfrac{75}{25} = 3\ \si{\second}.$$
-		
-		Với $t=\SI{3}{\second}$, thay vào phương trình chuyển động, ta được vị trí hai vật:
-		\begin{itemize}
-			\item Vị trí vật 1: $x_1 = 10t = 10 \cdot 3 = \SI{30}{m}.$
-			\item Vị trí vật 2: $x_2 = 100 - 15t = 100 - 15 \cdot 3 = 100 - 45 = \SI{55}{m}.$
-		\end{itemize}
-		Trong trường hợp này, vật 1 cách A $\SI{30}{m}$ và vật 2 cách A $\SI{55}{m}$, và chúng cách nhau $\SI{25}{m}$ ($55-30=25$).
-		
-		Vậy có hai thời điểm mà hai vật cách nhau $\SI{25}{m}$:
-		\begin{itemize}
-			\item Tại $t=\SI{3}{\second}$: Vật 1 ở $\SI{30}{m}$ và vật 2 ở $\SI{55}{m}$ (so với A).
-			\item Tại $t=\SI{5}{\second}$: Vật 1 ở $\SI{50}{m}$ và vật 2 ở $\SI{25}{m}$ (so với A).
+			\item \textbf{Trường hợp 1:} $25t - 100 = 25 \Rightarrow t=\SI{5}{\second}$.
+			\item \textbf{Trường hợp 2:} $25t - 100 = -25\Rightarrow t=\SI{3}{\second}$.
 		\end{itemize}
 	}
 \end{vd}
 \begin{dang}{Tính được tốc độ từ độ dốc của đồ thị độ dịch chuyển – thời gian.}
+	Vận tốc tức thời của vật tại một thời điểm được xác định bởi độ dốc của tiếp tuyến với đồ thị $\left(d-t\right)$ tại thời điểm đang xét.
+	$$v=\tan\alpha=\dfrac{\Delta d}{\Delta t}=\dfrac{d_2-d_1}{t_2-t_1}.$$
 \end{dang}
 \begin{vd}
 	Một vật chuyển động có đồ thị ($d$-$t$) được mô tả như hình \ref{fig:5.3}. Hãy xác định tốc độ tức thời của vật tại các vị trí $A, B$ và $C$.
 	\begin{center}
-		\includegraphics[scale=0.4]{figs/G10Y25B3-21}
+		\includegraphics[scale=0.5]{figs/G10Y25B3-21}
 		\captionof{figure}{}
 		\label{fig:5.3}
 	\end{center}
@@ -681,44 +742,44 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 		\item Mô tả chuyển động của xe.
 		\item Xác định vị trí của xe so với điểm xuất phát của xe ở giây thứ 2, giây thứ 4, giây thứ 8 và giây thứ 10.
 		\item Xác định tốc độ và vận tốc của xe trong 2 giây đầu, từ giây 2 đến giây 4 và từ giây 4 đến giây 8.
-		\item Xác định quãng đường đi được và độ dịch chuyển của xe sau 10 giây chuyển động. Tại sao giá trị của chúng không giống nhau?
+		\item Xác định quãng đường đi được và độ dịch chuyển của xe sau 10 giây chuyển động.
 	\end{enumerate}
 	\loigiai{
 		\begin{enumerate}[label=\alph*)]
-			\item **Mô tả chuyển động của xe:**
+			\item Mô tả chuyển động của xe:
 			\begin{itemize}
-				\item **Từ $\SI{0}{s}$ đến $\SI{2}{s}$:** Xe chuyển động thẳng đều theo chiều dương, độ dịch chuyển tăng từ $\SI{0}{m}$ lên $\SI{4}{m}$.
-				\item **Từ $\SI{2}{s}$ đến $\SI{4}{s}$:** Xe dừng lại (độ dịch chuyển không đổi, vẫn ở $\SI{4}{m}$).
-				\item **Từ $\SI{4}{s}$ đến $\SI{8}{s}$:** Xe chuyển động thẳng đều theo chiều âm (ngược chiều dương), độ dịch chuyển giảm từ $\SI{4}{m}$ về $\SI{0}{m}$ (về vị trí xuất phát).
-				\item **Từ $\SI{8}{s}$ đến $\SI{9}{s}$:** Xe tiếp tục chuyển động thẳng đều theo chiều âm, độ dịch chuyển giảm từ $\SI{0}{m}$ xuống $\SI{-1}{m}$.
-				\item **Từ $\SI{9}{s}$ đến $\SI{10}{s}$:** Xe dừng lại (độ dịch chuyển không đổi, vẫn ở $\SI{-1}{m}$).
+				\item Từ $\SI{0}{s}$ đến $\SI{2}{s}$: Xe chuyển động thẳng đều theo chiều dương, độ dịch chuyển tăng từ $\SI{0}{m}$ lên $\SI{4}{m}$.
+				\item Từ $\SI{2}{s}$ đến $\SI{4}{s}$: Xe dừng lại (độ dịch chuyển không đổi, vẫn ở $\SI{4}{m}$).
+				\item Từ $\SI{4}{s}$ đến $\SI{8}{s}$: Xe chuyển động thẳng đều theo chiều âm (ngược chiều dương), độ dịch chuyển giảm từ $\SI{4}{m}$ về $\SI{0}{m}$ (về vị trí xuất phát).
+				\item Từ $\SI{8}{s}$ đến $\SI{9}{s}$: Xe tiếp tục chuyển động thẳng đều theo chiều âm, độ dịch chuyển giảm từ $\SI{0}{m}$ xuống $\SI{-1}{m}$.
+				\item Từ $\SI{9}{s}$ đến $\SI{10}{s}$: Xe dừng lại (độ dịch chuyển không đổi, vẫn ở $\SI{-1}{m}$).
 			\end{itemize}
 			
-			\item **Vị trí của xe so với điểm xuất phát:**
+			\item Vị trí của xe so với điểm xuất phát:
 			\begin{itemize}
-				\item **Ở giây thứ 2 ($t=\SI{2}{s}$):** Xe cách vị trí xuất phát $\SI{4}{m}$ theo chiều dương ($d=\SI{4}{m}$).
-				\item **Ở giây thứ 4 ($t=\SI{4}{s}$):** Xe vẫn cách vị trí xuất phát $\SI{4}{m}$ theo chiều dương ($d=\SI{4}{m}$).
-				\item **Ở giây thứ 8 ($t=\SI{8}{s}$):** Xe quay lại vị trí xuất phát ($d=\SI{0}{m}$).
-				\item **Ở giây thứ 10 ($t=\SI{10}{s}$):** Xe ở sau vị trí xuất phát $\SI{1}{m}$ ($d=\SI{-1}{m}$).
+				\item Ở giây thứ 2 ($t=\SI{2}{s}$): Xe cách vị trí xuất phát $\SI{4}{m}$ theo chiều dương ($d=\SI{4}{m}$).
+				\item Ở giây thứ 4 ($t=\SI{4}{s}$): Xe vẫn cách vị trí xuất phát $\SI{4}{m}$ theo chiều dương ($d=\SI{4}{m}$).
+				\item Ở giây thứ 8 ($t=\SI{8}{s}$): Xe quay lại vị trí xuất phát ($d=\SI{0}{m}$).
+				\item Ở giây thứ 10 ($t=\SI{10}{s}$): Xe ở sau vị trí xuất phát $\SI{1}{m}$ ($d=\SI{-1}{m}$).
 			\end{itemize}
 			
-			\item **Tốc độ và vận tốc của xe:**
+			\item Tốc độ và vận tốc của xe:
 			\begin{itemize}
-				\item **Trong 2 giây đầu (từ $\SI{0}{s}$ đến $\SI{2}{s}$):**
+				\item Trong 2 giây đầu (từ $\SI{0}{s}$ đến $\SI{2}{s}$):
 				\begin{itemize}
 					\item Độ dịch chuyển: $\Delta d = \SI{4}{m} - \SI{0}{m} = \SI{4}{m}.$
 					\item Khoảng thời gian: $\Delta t = \SI{2}{s} - \SI{0}{s} = \SI{2}{s}.$
 					\item Vận tốc của xe: $v = \dfrac{\Delta d}{\Delta t} = \dfrac{\SI{4}{m}}{\SI{2}{s}} = \SI{2}{m/s}.$
 					\item Tốc độ của xe: $|v| = |\SI{2}{m/s}| = \SI{2}{m/s}.$
 				\end{itemize}
-				\item **Từ giây 2 đến giây 4 (từ $\SI{2}{s}$ đến $\SI{4}{s}$):**
+				\item Từ giây 2 đến giây 4 (từ $\SI{2}{s}$ đến $\SI{4}{s}$):
 				\begin{itemize}
 					\item Độ dịch chuyển: $\Delta d = \SI{4}{m} - \SI{4}{m} = \SI{0}{m}.$
 					\item Khoảng thời gian: $\Delta t = \SI{4}{s} - \SI{2}{s} = \SI{2}{s}.$
 					\item Vận tốc của xe: $v = \dfrac{\SI{0}{m}}{\SI{2}{s}} = \SI{0}{m/s}.$
 					\item Tốc độ của xe: $|v| = |\SI{0}{m/s}| = \SI{0}{m/s}.$
 				\end{itemize}
-				\item **Từ giây 4 đến giây 8 (từ $\SI{4}{s}$ đến $\SI{8}{s}$):**
+				\item Từ giây 4 đến giây 8 (từ $\SI{4}{s}$ đến $\SI{8}{s}$):
 				\begin{itemize}
 					\item Độ dịch chuyển: $\Delta d = \SI{0}{m} - \SI{4}{m} = \SI{-4}{m}.$
 					\item Khoảng thời gian: $\Delta t = \SI{8}{s} - \SI{4}{s} = \SI{4}{s}.$
@@ -727,9 +788,9 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 				\end{itemize}
 			\end{itemize}
 			
-			\item **Quãng đường đi được và độ dịch chuyển sau 10 giây:**
+			\item Quãng đường đi được và độ dịch chuyển sau 10 giây:
 			\begin{itemize}
-				\item **Quãng đường đi được ($s$):** Là tổng độ dài đoạn đường xe đã đi được, không xét chiều.
+				\item Quãng đường đi được ($s$): Là tổng độ dài đoạn đường xe đã đi được, không xét chiều.
 				\begin{itemize}
 					\item Từ $\SI{0}{s}$ đến $\SI{2}{s}$: Xe đi được $\SI{4}{m}$.
 					\item Từ $\SI{2}{s}$ đến $\SI{4}{s}$: Xe đi được $\SI{0}{m}$.
@@ -739,22 +800,16 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 				\end{itemize}
 				Tổng quãng đường xe đi được là $s = \SI{4}{m} + \SI{0}{m} + \SI{4}{m} + \SI{1}{m} + \SI{0}{m} = \SI{9}{m}.$
 				
-				\item **Độ dịch chuyển ($d$):** Là sự thay đổi vị trí của vật, bằng vị trí cuối trừ vị trí đầu.
+				\item Độ dịch chuyển ($d$): Là sự thay đổi vị trí của vật, bằng vị trí cuối trừ vị trí đầu.
 				Vị trí ban đầu ($t=\SI{0}{s}$): $d_0 = \SI{0}{m}$.
 				Vị trí cuối cùng ($t=\SI{10}{s}$): $d_{10} = \SI{-1}{m}$.
 				Độ dịch chuyển sau $\SI{10}{s}$: $d = d_{10} - d_0 = \SI{-1}{m} - \SI{0}{m} = \SI{-1}{m}.$
 			\end{itemize}
-			
-			**Tại sao giá trị của chúng không giống nhau?**
-			Giá trị của quãng đường đi được ($\SI{9}{m}$) và độ dịch chuyển ($\SI{-1}{m}$) không giống nhau vì vật đã **đổi chiều chuyển động** trong quá trình di chuyển (từ $\SI{4}{s}$ đến $\SI{9}{s}$ xe chuyển động ngược lại so với ban đầu).
-			\begin{itemize}
-				\item **Quãng đường đi được** là tổng chiều dài quỹ đạo mà vật đã đi, luôn là một giá trị không âm và chỉ phụ thuộc vào lộ trình.
-				\item **Độ dịch chuyển** là một đại lượng vectơ, chỉ phụ thuộc vào vị trí ban đầu và vị trí cuối cùng của vật. Nó có thể dương, âm hoặc bằng 0, và cho biết cả khoảng cách lẫn hướng so với điểm xuất phát.
-			\end{itemize}
-			Khi vật chuyển động thẳng và không đổi chiều, độ lớn của quãng đường đi được và độ dịch chuyển sẽ bằng nhau. Tuy nhiên, khi vật đổi chiều, tổng quãng đường sẽ lớn hơn độ lớn của độ dịch chuyển.
 		\end{enumerate}}
 	\end{vd}
 \begin{dang}{Xây dựng đồ thị tọa độ - thời gian, chọn tỉ xích, lập bảng giá trị tương ứng cho một vật chuyển động thẳng đều}
+	Phương trình tọa độ của vật chuyển động thẳng đều:
+	$$x=x_0+v\cdot \left(t-t_0\right).$$
 \end{dang}
 \begin{vd}
 	Vật chuyển động thẳng đều có đồ thị tọa độ - thời gian như hình vẽ. Phương trình chuyển động của vật có dạng nào sau đây?
@@ -762,16 +817,16 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 		\includegraphics[scale=0.6]{figs/G10Y25B3-22}
 	\end{center}
 	\choice
-	{\True $x=5+5t$.}
-	{$x=4t$.}
-	{$x=5-5t$.}
-	{$x=5+4t$.}
+	{\True $x=5+5t$}
+	{$x=4t$}
+	{$x=5-5t$}
+	{$x=5+4t$}
 	\loigiai{
 		Đồ thị tọa độ - thời gian là một đường thẳng, cho thấy vật chuyển động thẳng đều.
 		Từ đồ thị, ta có thể xác định các thông số:
 		\begin{itemize}
-			\item **Tọa độ ban đầu ($x_0$):** Tại $t = 0$, đồ thị đi qua điểm có tọa độ $x = \SI{5}{m}$. Vậy $x_0 = \SI{5}{m}$.
-			\item **Vận tốc ($v$):** Vận tốc của vật được tính bằng độ dốc của đồ thị. Chọn hai điểm rõ ràng trên đồ thị, ví dụ điểm $(\SI{0}{s}, \SI{5}{m})$ và $(\SI{2}{s}, \SI{15}{m})$.
+			\item Tọa độ ban đầu ($x_0$): Tại $t = 0$, đồ thị đi qua điểm có tọa độ $x = \SI{5}{m}$. Vậy $x_0 = \SI{5}{m}$.
+			\item Vận tốc ($v$): Vận tốc của vật được tính bằng độ dốc của đồ thị. Chọn hai điểm rõ ràng trên đồ thị, ví dụ điểm $(\SI{0}{s}, \SI{5}{m})$ và $(\SI{2}{s}, \SI{15}{m})$.
 			$$v = \dfrac{\Delta x}{\Delta t} = \dfrac{x_2 - x_1}{t_2 - t_1} = \dfrac{\SI{15}{m} - \SI{5}{m}}{\SI{2}{s} - \SI{0}{s}} = \dfrac{\SI{10}{m}}{\SI{2}{s}} = \SI{5}{m/s}.$$
 		\end{itemize}
 		
@@ -789,7 +844,7 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 	\end{enumerate}
 	\loigiai{
 		\begin{enumerate}[label=\alph*)]
-			\item **Viết phương trình chuyển động của mỗi xe:**
+			\item Viết phương trình chuyển động của mỗi xe:
 			Chọn hệ quy chiếu gồm:
 			\begin{itemize}
 				\item Gốc tọa độ là vị trí của xe (I) lúc $t=0$.
@@ -799,28 +854,28 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 			
 			Xác định các thông số cho từng xe:
 			\begin{itemize}
-				\item **Xe (I):**
+				\item Xe (I):
 				\begin{itemize}
-					\item Vị trí ban đầu ($x_{0\text{(I)}}$): Tại gốc tọa độ, nên $x_{0\text{(I)}} = \SI{0}{m}$.
-					\item Vận tốc ($v_{\text{(I)}}$): Tốc độ $\SI{20}{m/s}$, chuyển động theo chiều dương, nên $v_{\text{(I)}} = +\SI{20}{m/s}$.
+					\item Vị trí ban đầu: $x_{0\text{(I)}} = \SI{0}{m}$.
+					\item Vận tốc: $v_{\text{(I)}} = \SI{20}{m/s}$.
 				\end{itemize}
 				Phương trình chuyển động của xe (I) là:
 				\begin{equation*}
-					x_{\text{(I)}}=x_{0\text{(I)}} + v_{\text{(I)}}t = \SI{0}{} + \SI{20}{} \cdot t = 20t\qquad\left(\si{\meter}, \si{\second}\right).
+					x_{\text{(I)}}= 20t\qquad\left(\si{\meter}, \si{\second}\right).
 				\end{equation*}
 				
-				\item **Xe (II):**
+				\item Xe (II):
 				\begin{itemize}
-					\item Vị trí ban đầu ($x_{0\text{(II)}}$): Lúc $t=0$, hai xe cách nhau $\SI{200}{m}$ và chuyển động cùng chiều. Do xe (I) ở gốc, xe (II) phải ở vị trí $\SI{200}{m}$ theo chiều dương. Vậy $x_{0\text{(II)}} = \SI{200}{m}$.
-					\item Vận tốc ($v_{\text{(II)}}$): Tốc độ $\SI{10}{m/s}$, chuyển động theo chiều dương, nên $v_{\text{(II)}} = +\SI{10}{m/s}$.
+					\item Vị trí ban đầu: $x_{0\text{(II)}} = \SI{200}{m}$.
+					\item Vận tốc: $v_{\text{(II)}} = \SI{10}{m/s}$.
 				\end{itemize}
 				Phương trình chuyển động của xe (II) là:
 				\begin{equation*}
-					x_{\text{(II)}}=x_{0\text{(II)}} + v_{\text{(II)}}t = \SI{200}{} + \SI{10}{} \cdot t = 200+10t\qquad\left(\si{\meter}, \si{\second}\right).
+					x_{\text{(II)}}= 200+10t\qquad\left(\si{\meter}, \si{\second}\right).
 				\end{equation*}
 			\end{itemize}
 			
-			\item **Vẽ đồ thị chuyển động và xác định thời điểm, nơi gặp nhau:**
+			\item Vẽ đồ thị chuyển động và xác định thời điểm, nơi gặp nhau:
 			Để vẽ đồ thị, ta lập bảng giá trị tọa độ theo thời gian cho mỗi xe:
 			\begin{center}
 				\begin{tabular}{|c|c|c|}
@@ -838,19 +893,8 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 			\begin{center}
 				\includegraphics[scale=0.8]{figs/G10Y25B3-23}
 			\end{center}
-			
-			**Xác định thời điểm và nơi gặp nhau từ đồ thị:**
-			Hai xe gặp nhau khi tọa độ của chúng bằng nhau, tức là giao điểm của hai đồ thị $x_{\text{(I)}}(t)$ và $x_{\text{(II)}}(t)$.
-			Nhìn vào đồ thị, hai đường thẳng cắt nhau tại điểm M có tọa độ $t_M=\SI{20}{s}$ và $x_M=\SI{400}{m}$.
-			
-			**Kiểm tra bằng phép tính:**
-			Hai xe gặp nhau khi $x_{\text{(I)}} = x_{\text{(II)}}$:
-			$$20t = 200 + 10t$$
-			$$10t = 200$$
-			$$t = \dfrac{200}{10} = \SI{20}{s}.$$
-			Thay $t = \SI{20}{s}$ vào một trong hai phương trình để tìm vị trí:
-			$$x_{\text{(I)}} = 20 \cdot \SI{20}{} = \SI{400}{m}.$$
-			
+			Xác định thời điểm và nơi gặp nhau từ đồ thị:\\
+			Dựa vào đồ thị, hai đường thẳng cắt nhau tại điểm M có tọa độ $t_M=\SI{20}{s}$ và $x_M=\SI{400}{m}$.\\
 			Vậy, hai xe gặp nhau sau $\SI{20}{s}$ kể từ lúc $t=0$, tại vị trí cách gốc tọa độ (vị trí ban đầu của xe I) một khoảng $\SI{400}{m}$.
 		\end{enumerate}	
 	}
@@ -881,6 +925,26 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 \end{ex}
 
 \begin{ex}
+	Để xác định tốc độ trung bình của một vật chuyển động trên đoạn đường ngắn từ $A$ đến $B$, ta cần dùng dụng cụ đo nào?
+	\choice
+	{Oát kế}
+	{\True Đồng hồ đo thời gian và thước mét}
+	{Chỉ cần đồng hồ đo thời gian}
+	{Chỉ cần thước mét}
+	\loigiai{}
+\end{ex}
+
+\begin{ex}
+	Trong $\SI{120}{\second}$, một vật đi được quãng đường $\SI{600}{\meter}$ thì độ dịch chuyển tương ứng với quãng đường này có độ lớn là $\SI{480}{\meter}$. Vận tốc trung bình của vật có độ lớn là
+	\choice
+	{$\SI{240}{\meter/\second}$}
+	{$\SI{5}{\meter/\second}$}
+	{\True $\SI{4}{\meter/\second}$}
+	{$\SI{300}{\meter/\second}$}
+	\loigiai{}
+\end{ex}
+
+\begin{ex}
 	Một vật bắt đầu chuyển động từ điểm $O$ đến điểm $A$, sau đó chuyển động về điểm $B$. Quãng đường và độ dịch chuyển của vật tương ứng là
 	\begin{center}
 		\includegraphics[scale=0.5]{figs/G10Y25B3-7}
@@ -906,7 +970,7 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 \end{ex}
 
 \begin{ex}
-	“Lúc 15 giờ 30 phút hôm qua, xe chúng tôi đang chạy trên quốc lộ 5, cách Hải Dương 10 km”. Việc xác định vị trí của ô tô như trên còn thiếu yếu tố gì?
+	“Lúc 15 giờ 30 phút hôm qua, xe chúng tôi đang chạy trên quốc lộ 5, cách Hải Dương \SI{10}{\kilo\meter}”. Việc xác định vị trí của ô tô như trên còn thiếu yếu tố gì?
 	\choice
 	{Vật làm mốc}
 	{\True Chiều dương trên đường đi}
@@ -991,7 +1055,7 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 	Đại lượng đặc trưng cho tính chất nhanh hay chậm của chuyển động là 
 	\choice
 	{toạ độ}
-	{gia tốc}
+	{độ dịch chuyển}
 	{quãng đường đi}
 	{\True tốc độ}
 	\loigiai{
@@ -1001,7 +1065,7 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 \begin{ex}
 	Khi nhìn vào tốc kế của ô tô đang chạy, số chỉ trên tốc kế cho ta biết
 	\choice
-	{gia tốc tức thời của ô tô}
+	{vận tốc trung bình  của ô tô}
 	{vận tốc tức thời của ô tô}
 	{\True tốc độ tức thời của ô tô}
 	{tốc độ trung bình của ô tô}
@@ -1198,7 +1262,28 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 		{\True $\SI{30}{\kilo\meter/\hour}$}
 		{$\SI{150}{\kilo\meter/\hour}$}
 		{$\SI{120}{\kilo\meter/\hour}$}
-		{$\SI{100}{\kilo\meter/\hour}$}}{\includegraphics[scale=0.6]{figs/G10Y25B3-27}}
+		{$\SI{100}{\kilo\meter/\hour}$}}{\vspace{-0.5cm}\begin{tikzpicture}  
+			\begin{axis}[  ultra thick,scale=0.5,
+				xmin=0,  
+				xmax=6,  
+				xtick={0,1,...,5},
+				ytick={0,30,...,150},
+				minor x tick num=0,
+				minor y tick num=0,
+				ymin=0,  
+				ymax=160, 
+				samples=300,
+				axis lines=center, 
+				grid style={step=1, line width =0.4pt, color=gray!30!white},
+				grid=both,
+				major grid style={line width=0.8pt,gray!60!white},
+				xlabel=$\xsi{t}{\left(\si{\hour}\right)}$, 		ylabel=$\xsi{d}{\left(\si{\kilo\meter}\right)}$,
+				every axis y label/.style={at=(current axis.above origin),anchor=south},  
+				every axis x label/.style={at=(current axis.right of origin),anchor=west},  ]
+				\addplot [ultra thick, blue, smooth, domain=1:5] {30*x};			 
+			\end{axis}  
+			\node[left] at (0,0) {O};
+			\end{tikzpicture}}
 	\loigiai{}
 \end{ex}
 
@@ -1218,7 +1303,68 @@ $$\overline{v}_{\mathrm{tb}}=\dfrac{s}{t}.$$
 		{$\SI{1.6}{\centi\meter/\second}$}
 		{$\SI{6.4}{\centi\meter/\second}$}
 		{$\SI{4.8}{\centi\meter/\second}$}
-		{\True $\SI{2.4}{\centi\meter/\second}$}}{\includegraphics[scale=0.5]{figs/G10Y25B3-29}}
+		{\True $\SI{2.4}{\centi\meter/\second}$}}{\vspace{-0.75cm}\begin{tikzpicture}  
+			\begin{axis}[  ultra thick,scale=0.75,
+				xmin=0,  
+				xmax=6,  
+				xtick={0,1,...,5},
+				ytick={-2,-1,0,1,...,4},
+				minor x tick num=1,
+				minor y tick num=0,
+				ymin=-2.5,  
+				ymax=5, 
+				samples=300,
+				axis lines=center, 
+				grid style={step=1, line width =0.4pt, color=gray!30!white},
+				grid=both,
+				major grid style={line width=0.8pt,gray!60!white},
+				xlabel=$\xsi{t}{\left(\si{\second}\right)}$, 		ylabel=$\xsi{d}{\left(\si{\centi\meter}\right)}$,
+				every axis y label/.style={at=(current axis.above origin),anchor=south},  
+				every axis x label/.style={at=(current axis.right of origin),anchor=west},  ]
+				\addplot [ultra thick, blue, smooth, domain=0:1] {4*x};	
+				\addplot [ultra thick, blue, smooth, domain=1:2.5] {4-4*(x-1)};		
+				\addplot [ultra thick, blue, smooth, domain=2.5:4] {-2};	 
+				\addplot [ultra thick, blue, smooth, domain=4:5] {-2+2*(x-4)};
+				
+			\end{axis}  
+			\node[left] at (0,1.5) {O};
+			
+			\end{tikzpicture}}
+	\loigiai{}
+\end{ex}
+
+\begin{ex}
+	Đồ thị toạ độ - thời gian của hai xe (I) và (II) cùng chuyển động trên một đường thẳng được thể hiện như hình bên. Thời điểm hai xe gặp nhau là
+	\begin{center}
+		\begin{tikzpicture}  
+			\begin{axis}[  ultra thick,
+				xmin=-3,  
+				xmax=4,  
+				xtick={-2,0,1},
+				ytick={0,10,...,40},
+				minor x tick num=0,
+				minor y tick num=0,
+				ymin=-10,  
+				ymax=55, 
+				samples=300,
+				axis lines=center, 
+				xlabel=$\xsi{t}{\left(\si{\hour}\right)}$, 		ylabel=$\xsi{x}{\left(\si{\kilo\meter}\right)}$,
+				every axis y label/.style={at=(current axis.above origin),anchor=south},  
+				every axis x label/.style={at=(current axis.right of origin),anchor=west},  ]
+				\addplot [ultra thick, blue, smooth, domain=0:2.5] {20*x} node[left] {(I)};	
+				\addplot [ultra thick, red, smooth, domain=-2:3] {30+5*x} node[below] {(II)};	
+				\addplot [thick, dashed, domain=-2:1] {20} ;	
+				\draw[thick, dashed] (axis cs:-2,0) --(axis cs:-2,20);	 
+				\draw[thick, dashed] (axis cs:1,0) --(axis cs: 1,20);
+			\end{axis}  
+			\node[left] at (0,0) {O};
+		\end{tikzpicture}
+	\end{center}
+	\choice
+	{$\SI{1}{\hour}$}
+	{\True$\SI{2}{\hour}$}
+	{$\SI{2.5}{\hour}$}
+	{$\SI{1.33}{\hour}$}
 	\loigiai{}
 \end{ex}
 
@@ -1285,42 +1431,247 @@ Hãy thiết lập phương trình chuyển động của một ô tô chuyển 
 \end{ex}
 
 \begin{ex}
-	\immini{Hình dưới là đồ thị độ dịch chuyển - thời gian của hai vật chuyển động thẳng cùng hướng. Tỉ lệ vận tốc $\dfrac{v_A}{v_B}$ là
-		\choice
-		{$\dfrac{3}{1}$}
-		{\True $\dfrac{1}{3}$}
-		{$\dfrac{\sqrt{3}}{1}$}
-		{$\dfrac{1}{\sqrt{3}}$}}{\includegraphics[scale=0.5]{figs/G10Y25B3-30}}
+	Hình dưới là đồ thị độ dịch chuyển - thời gian của hai vật chuyển động thẳng cùng hướng. Tỉ lệ vận tốc $\dfrac{v_A}{v_B}$ là
+	\begin{center}
+		\begin{tikzpicture} 
+			\coordinate (O)  at (0,0);
+			\coordinate (t) at (4,0);
+			\coordinate (d) at (0,4);
+			\coordinate (A) at ($(O)+(30:3)$);
+			\coordinate (B) at ($(O)+(60:3.5)$);
+			\draw[line width=1pt, -latex] (O)--(d);
+			\draw[line width=1pt, -latex] (O)--(t);
+			\draw[line width=1.5pt, red] (O)--(A);
+			\draw[line width=1.5pt, blue] (O)--(B);
+			\node[left] at (O) {O};
+			\node[above] at (t) {$t$};
+			\node[left] at (d) {$d$};
+			\node[above] at (A) {A};
+			\node[above] at (B) {B};
+			\tkzFillAngle[size=0.75cm,color=red, fill=red, opacity=0.25](t,O,A);
+			\tkzLabelAngle[color=red,pos=1.2](t,O,A){$\SI{30}{\degree}$}
+			\tkzMarkAngle[size=0.5cm,color=blue](t,O,B);
+			\node[blue] at (0.75,0.7) {$\SI{60}{\degree}$};
+		\end{tikzpicture}
+	\end{center}
+	\choice
+	{$\dfrac{3}{1}$}
+	{\True $\dfrac{1}{3}$}
+	{$\dfrac{\sqrt{3}}{1}$}
+	{$\dfrac{1}{\sqrt{3}}$}
 	\loigiai{}
 \end{ex}
 \Closesolutionfile{ans}
-\subsection{TỰ LUẬN VÀ TRẢ LỜI NGẮN}
+\subsection{TRẮC NGHIỆM ĐÚNG/SAI}
 \setcounter{ex}{0}
-\Opensolutionfile{ans}[ans/G10Y25B3-TL]
+\Opensolutionfile{ans}[ans/G10Y25B3-TF]
+% ===================================================================
 \begin{ex}
-	Khi nào quãng đường và độ di chuyển của một vật có cùng một độ lớn?
-	\loigiai{	Chuyển động của vật có quỹ đạo là đường thẳng và không đổi chiều chuyển động.
-	}
+	Trong chuyển động thẳng đều
+	\choiceTF[t]
+	{\True độ dốc của đồ thị độ dịch chuyển - thời gian cho biết vật chuyển động nhanh hay chậm}
+	{độ dốc đồ thị độ dịch chuyển - thời gian càng lớn thì vật chuyển động càng chậm}
+	{\True nếu độ dốc đồ thị độ dịch chuyển - thời gian âm thì vật đang chuyển động ngược lại}
+	{quãng đường đi được trong khoảng thời gian từ $t_0$ đến $t_1$ là diện tích giới hạn bởi đường thẳng $d$ và trục $Ot$ trong khoảng $[t_0, t_1]$ trong hệ trục tọa độ $Odt$}
+	\loigiai{}
+\end{ex}
+\begin{ex}
+	Một vật bắt đầu chuyển động từ điểm O đến điểm A, sau đó chuyển động về điểm B (hình vẽ).
+	\begin{center}
+		\includegraphics[scale=0.7]{figs/G10Y25B3-37}
+	\end{center}
+	\choiceTF[t]
+	{Trong toàn bộ quá trình chuyển động nói trên, vectơ độ dịch chuyển của vật là $\vec{BO}$}
+	{\True Quãng đường và độ dịch chuyển của vật bằng nhau khi chuyển động từ điểm O đến điểm A}
+	{\True Khi vật chuyển động từ điểm O đến điểm A rồi quay về điểm O thì quãng đường đi được là $\SI{6}{\meter}$}
+	{\True Quãng đường và độ dịch chuyển của vật trong cả quá trình chuyển động lần lượt là $\SI{8}{\meter}$; $\SI{-2}{\meter}$}
+	\loigiai{}
+\end{ex}
+\begin{ex}
+	Lúc $\SI{8}{\hour}$, Hải đang lái một chiếc xe bán tải cũ chạy trên một đường thẳng với tốc độ $\SI{70}{\kilo\meter/\hour}$ về hướng đông. Khi Hải đi được $\SI{8.4}{\kilo\meter}$ thì xe hết xăng. Trong $\SI{30}{\minute}$ tiếp theo, Hải đi bộ thêm $\SI{2.0}{\kilo\meter}$ nữa dọc theo con đường đó để đi đến trạm xăng. Chọn chiều dương là chiều chuyển động ban đầu của xe.
+	\begin{center}
+		\includegraphics[scale=0.7]{figs/G10Y25B3-39}
+	\end{center}
+	\choiceTF[t]
+	{\True Khoảng thời gian từ lúc $t = \SI{8}{\hour}$ đến khi Hải đến trạm xăng là $\SI{0.62}{\hour}$}
+	{Kể từ lúc $\SI{8}{\hour}$ cho đến khi gặp trạm xăng, Hải đã thực hiện độ dịch chuyển là $\SI{8.6}{\kilo\meter}$}
+	{Giả sử việc bơm xăng, trả tiền và đi bộ trở lại xe mất thêm $\SI{45}{\minute}$ nữa. Vận tốc trung bình của Hải trong khoảng thời gian từ lúc $\SI{8}{\hour}$ đến lúc mang xăng tới xe xấp xỉ $\SI{9.1}{\kilo\meter/\hour}$}
+	{Lúc Hải đang lái xe với tốc độ $\SI{70}{\kilo\meter/\hour}$ về hướng đông thì Điền cũng đang lái xe ô tô khác với tốc độ $\SI{70}{\kilo\meter/\hour}$ hướng về phía tây. Khi đó, Hải và Điền đang chuyển động với cùng vận tốc}
+	\loigiai{}
 \end{ex}
 
 \begin{ex}
-	Xác định độ dịch chuyển trong các khoảng thời gian liên tiếp bằng nhau của mỗi chuyển động.
+	\immini{Một người đi xe đạp từ điểm A đến điểm C theo đường gấp khúc ABC như trên bản đồ hết thời gian là $\SI{40}{\second}$. Trong hành trình trên:
+	\choiceTF
+	{Độ dịch chuyển của người đó là $\SI{418}{\meter}$}
+	{Quãng đường người đó đi được là $\SI{360}{\meter}$}
+	{\True Tốc độ trung bình của người đó là $\SI{10.45}{\meter/\second}$}
+	{\True Độ lớn vận tốc trung bình của người đó là $\SI{9}{\meter/\second}$}
+	}{\includegraphics[scale=0.35]{figs/G10Y25B3-40}}
 	
+	\loigiai{}
+\end{ex}
+% ===================================================================
+\begin{ex}
+	Một học sinh khi đi học đã di chuyển trên quãng đường thẳng dài \SI{12}{\kilo\meter} từ nhà mình đến nhà bạn. Sau khi chơi ở nhà bạn 20 phút, học sinh này di chuyển về nhà với tốc độ chậm hơn lúc đi \SI{4}{\kilo\meter/\hour} dẫn đến thời gian di chuyển trên đoạn đường về nhiều hơn so với thời gian lúc đi \SI{15}{\minute}. Xem quá trình chuyển động trong lúc đi và về của học sinh là chuyển động thẳng đều.
+	\choiceTF[t]
+	{\True Độ dịch chuyển của học sinh khi đi từ nhà mình đến nhà bạn là \SI{12}{\kilo\meter}}
+	{Tốc độ của học sinh trên đoạn đường từ nhà mình đến nhà bạn là \SI{14}{\kilo\meter}}
+	{\True Thời gian học sinh di chuyển khi đi từ nhà bạn về nhà mình là \SI{60}{\minute}}
+	{\True Tốc độ trung bình của học sinh tính từ lúc rời khỏi nhà mình đến khi trở về nhà là \SI{11.52}{\kilo\meter/\hour}}
+	\loigiai{}
+\end{ex}
+\begin{ex}
+	Trong một tình huống bóng đá, thủ môn xuất phát từ vạch ngang nối hai cột của khung thành chạy thẳng lên phía trước để bắt bóng. Hình bên là đồ thị độ dịch chuyển - thời gian của thủ môn. Điểm A tương ứng với điểm xuất phát, đoạn AB có dạng parabol, BC là đoạn thẳng.
 	\begin{center}
-		\includegraphics[scale=0.6]{figs/G10Y25B3-8}
+		\begin{tikzpicture}  
+			\begin{axis}[  ultra thick,scale=0.75,
+				xmin=0,  
+				xmax=7,  
+				xtick={0,1,...,6},
+				ytick={0,10,20},
+				minor x tick num=0,
+				minor y tick num=0,
+				ymin=0,  
+				ymax=25, 
+				samples=300,
+				axis lines=center, 
+				xlabel=$\xsi{t}{\left(\si{\second}\right)}$, 		ylabel=$\xsi{d}{\left(\si{\meter}\right)}$,
+				every axis y label/.style={at=(current axis.above origin),anchor=south},  
+				every axis x label/.style={at=(current axis.right of origin),anchor=west},  ]
+				\draw[dashed, line width=1pt] (axis cs: 0,10)--(axis cs: 2,10)--(axis cs: 2,0);
+				\draw[dashed, line width=1pt] (axis cs: 0,20)--(axis cs: 3,20)--(axis cs: 3,0);
+				\draw[dashed, line width=1pt] (axis cs: 4,20)--(axis cs: 4,0);
+				\addplot [line width=2pt, blue, smooth, domain=0:2] {0.5*5*x^(2)}; 
+				\addplot [line width=2pt, blue, smooth, domain=2:3] {10+10*(x-2)};  
+				\addplot [line width=2pt, blue, smooth, domain=3:4] {20}; 
+				\addplot [line width=2pt, blue, smooth, domain=4:6] {20-10*(x-4)};
+				\coordinate (O) at (axis cs: 0,0);
+				\coordinate (A) at (axis cs: 0,0);
+				\coordinate (B) at (axis cs: 2,10);
+				\coordinate (C) at (axis cs: 3,20);
+				\coordinate (D) at (axis cs: 4,20);
+				\coordinate (E) at (axis cs: 6,0);
+				\node[above left] at (B) {\textbf{B}};
+				\node[above] at (C) {\textbf{C}};
+				\node[above] at (D) {\textbf{D}};
+				\node[above right] at (E) {\textbf{E}};
+			\end{axis}  
+			\node[below] at (O) {0};
+			\node[left] at (A) {\textbf{A}};
+		\end{tikzpicture}
 	\end{center}
-	\loigiai{	
-		Độ dịch chuyển trong các khoảng thời gian liên tiếp bằng nhau của mỗi chuyển động
-		
-		$$\Delta d_1 = x_2 - x_1 = \SI{0,2}{m}.$$
-		
-		$$\Delta d_2 = x_3 - x_2 = \SI{0,2}{m}.$$
-		
-		$$\Delta d_3 = x_4 - x_3 = \SI{0,2}{m}.$$
-		
-		$$\Delta d_4 = x_5 - x_4 = \SI{0,2}{m}.$$
+	\choiceTF[t]
+	{Trong khoảng thời gian từ $\SI{0}{\second}$ đến $\SI{6}{\second}$ thủ môn không đổi hướng chuyển động}
+	{\True Thủ môn tăng tốc trong khoảng thời gian từ $\SI{0}{\second}$ đến $\SI{2}{\second}$}
+	{\True Tốc độ chuyển động của thủ môn từ điểm B đến điểm C là $\SI{10}{\meter/\second}$}
+	{\True Từ 4 giây đến 6 giây, vận tốc chuyển động của thủ môn có giá trị $\SI{-10}{\meter/\second}$}
+	\loigiai{}
+\end{ex}
+% ===================================================================
+\begin{ex}
+	\immini{Trong kho hàng, các thùng hàng được vận chuyển bằng các băng tải. Một băng tải có chiều dài \SI{8}{\meter} khi hoạt động thì các thùng hàng di chuyển trên đó xem như chuyển động thẳng đều với tốc độ \SI{0.4}{\meter/\second}. Các thùng hàng được sắp xếp liên tục và cách nhau \SI{1}{\meter} (như hình minh họa)}{\includegraphics[scale=0.25]{figs/G10Y25B3-42}}
+	\choiceTF[t]
+	{\True Số lượng thùng hàng có thể có cùng 1 lúc trên băng tải là 9}
+	{\True Thời gian để một thùng hàng di chuyển từ đầu này sang đầu kia băng tải là \SI{20}{\second}}
+	{Khi thùng hàng đầu tiên (số 1) đến cuối băng tải thì thùng hàng số 5 đã đi được quãng đường \SI{5}{\meter} trên băng tải}
+	{\True Nếu tại thời điểm $t=0$ thùng hàng đầu tiêu được xếp lên băng tải thì sau đó \SI{45}{\second} thùng hàng thứ 11 sẽ rời khỏi băng tải}
+	\loigiai{}
+\end{ex}
+% ===================================================================
+\begin{ex}
+	\immini{Hai xe ô tô (I) và (II) đang chuyển động thẳng đều trên hai đường thẳng vuông góc với nhau và cắt nhau tại O. Tại thời điểm ban đầu $\left(t=0\right)$, ô tô (I) đi qua điểm A với tốc độ $v_1=\SI{45}{\kilo\meter/\hour}$ và cách O một đoạn $\mathrm{OA}=\SI{10}{\kilo\meter}$, ô tô (II) đi qua điểm B với tốc độ $v_2=\SI{60}{\kilo\meter/\hour}$ và cách O một đoạn $\mathrm{BO}=\SI{15}{\kilo\meter}$. Cả hai ô tô cùng đang hướng về O.\choiceTF
+		{Xe (II) đến điểm O trước xe (I)}
+		{Nếu xe (II) giữ nguyên tốc độ, xe (I) cần tăng tốc để hai xe đến điểm O cùng lúc}
+		{\True Khoảng cách giữa hai xe ở thời điểm $t=\SI{12}{\minute}$ xấp xỉ \SI{3.16}{\kilo\meter}}
+		{\True Khoảng cách ngắn nhất giữa hai xe trong quá trình di chuyển là \SI{1}{\kilo\meter}}}{\begin{tikzpicture}
+			\draw[line width=1.5pt, -stealth] (-3,0)--(3,0);
+			\draw[line width=1.5pt, -stealth] (0,-3.5)--(0,3);
+			\node[right] at (0,3) {$y$};
+			\node[above] at (3,0) {$x$};
+			\draw[-latex, line width=2pt, red] (-2,0)--(-1,0);
+			\draw[-latex, line width=2pt, blue] (0,-3)--(0,-2);
+			\filldraw (-2,0) circle(2pt) node[above]{(I)};
+			\filldraw (0,-3) circle(2pt) node[right]{(II)};
+			\node[below] at (-2,0) {A};
+			\node[left] at (0,-3) {B};
+			\node[above, red] at (-1,0) {$\vec{v_1}$};
+			\node[right, blue] at (0,-2) {$\vec{v_2}$};
+			\node[below left] at (0,0) {O};
+			\end{tikzpicture}}
+	\loigiai{}
+\end{ex}
+
+\Closesolutionfile{ans}
+\subsection{TRẢ LỜI NGẮN}
+\setcounter{ex}{0}
+\Opensolutionfile{ans}[ans/G10Y25B3-SA]
+\begin{ex}
+	Một chiếc xe ô tô xuất phát từ A lúc $\SI{6}{\hour}$ sáng, chuyển động thẳng đều tới B, cách A một khoảng $\SI{120}{\kilo\meter}$. Biết xe tới B mất hết $\SI{2}{\hour}$. Thời điểm xe đến B lúc mấy giờ sáng?
+	\shortans[oly]{8}
+	\loigiai{\SI{8}{\hour}}
+\end{ex}
+
+\begin{ex}
+	\immini{Hình bên dưới là ảnh chụp đồng hồ đo tốc độ trên ô tô đang chuyển động. Tốc độ của ô tô tại thời điểm chụp ảnh là bao nhiêu \si{\kilo\meter/\hour}?}{\includegraphics[scale=0.5]{figs/G10Y25B3-38}}
+	\shortans[oly]{60}
+	\loigiai{\SI{60}{\kilo\meter/\hour}}
+\end{ex}
+
+\begin{ex}
+	Khi lái xe trên đường, người lái chỉ mất tập trung một khoảng thời gian rất nhỏ cũng có thể gây ra va chạm không mong muốn. Khi một người hắt hơi mạnh, mắt của người đó có thể nhắm lại trong $\SI{0.50}{\second}$. Nếu người đó đang lái xe với tốc độ $\SI{90}{\kilo\meter/\hour}$ thì xe sẽ đi được bao nhiêu mét trong khoảng thời gian nhắm mắt đó? (kết quả lấy đến một chữ số sau dấu phẩy).
+	\shortans[oly]{12,5}
+	\loigiai{\SI{12.5}{\meter}}
+\end{ex}
+
+\begin{ex}
+	Một vận động viên đã chạy $\SI{10}{\kilo\meter}$ trong thời gian là $\SI{36}{\minute}$. Tính tốc độ trung bình của vận động viên đó theo đơn vị là \si{\meter/\second}. (Kết quả làm tròn sau dấu phẩy thập phân 2 chữ số có nghĩa)
+	\shortans[oly]{4,63}
+	\loigiai{\SI{4.63}{\meter/\second}}
+\end{ex}
+
+\begin{ex}
+	Một người lái ô tô đi thẳng $\SI{5}{\kilo\meter}$ theo hướng Tây, sau đó rẽ trái đi thẳng theo hướng Nam $\SI{12}{\kilo\meter}$. Độ dịch chuyển của ô tô là bao nhiêu \si{\kilo\meter}?
+	\shortans[oly]{13}
+	\loigiai{\SI{13}{\kilo\meter}}
+\end{ex}
+\begin{ex}
+	Một vận động viên chạy từ điểm xuất phát lên một quả đồi với tốc độ không đổi $\SI{3}{\meter/\second}$. Khi chạy được $\SI{90}{\meter}$ thì vận động viên này lập tức chạy ngược lại theo đường cũ về điểm xuất phát với tốc độ không đổi $\SI{6}{\meter/\second}$. Ở cả hành trình trên, tốc độ trung bình của vận động viên là bao nhiêu $\si{\meter/\second}$?
+	\shortans[oly]{4 }
+	\loigiai{
+		$$v_{\text{tb}}=\dfrac{2s}{\dfrac{s}{v_1}+\dfrac{s}{v_2}}=\SI{4}{\meter/\second}.$$
 	}
 \end{ex}
+\begin{ex}
+	Trong một thí nghiệm đo tốc độ chuyển động của vật nhỏ bằng đồng hồ cần rung, người ta đã thu được một băng giấy với các dấu mực như hình vẽ bên dưới. Thước đo được sử dụng trong hình vẽ là thước đo $\si{\centi\meter}$. Biết rằng khoảng thời gian giữa các lần chấm mực luôn bằng nhau và bằng $\SI{0.2}{\second}$. Trong khoảng thời gian giữa lần chấm mực đầu tiên (đánh số 1) cho đến lần chấm mực cuối cùng (đánh số 8) thì tốc độ trung bình của vật nhỏ đó bằng bao nhiêu $\si{\centi\meter/\second}$?	\textit{(Kết quả làm tròn đến 2 chữ số sau dấu phẩy thập phân)}.
+	\begin{center}
+		\includegraphics[scale=0.5]{figs/G10Y25B3-41}
+	\end{center}
+	\shortans[oly]{6,57}
+	\loigiai{\SI{6.57}{\centi\meter/\second}	}
+\end{ex}
+\begin{ex}
+	Một con bọ rùa bò đều trên các cạnh của một tấm ván hình chữ nhật với chiều dài các cạnh $\mathrm{AB}=\SI{40}{\centi\meter}$, $\mathrm{BC}=\SI{20}{\centi\meter}$, mỗi 2 giây nó bò được $\SI{1.5}{\centi\meter}$. Tại thời điểm ban đầu, con bọ rùa ở đỉnh A của tấm ván. Kể từ thời điểm ban đầu, trong thời gian $\SI{80}{\second}$, vận tốc trung bình là bao nhiêu $\si{\centi\meter/\second}$? \textit{(Kết quả làm tròn đến 2 chữ số sau dấu thập phân.)}
+	\shortans[oly]{$0,56$}
+	\loigiai{
+		Trong $\SI{80}{\second}$ con bọ rùa bò được $\SI{60}{\centi\meter}$ nên đi được hết cạnh AC và BC.\\
+		$$v=\dfrac{\sqrt{\mathrm{AC}^2+\mathrm{BC}^2}}{t}\approx\SI{0.56}{\centi\meter/\second}.$$
+	}
+\end{ex}
+\begin{ex}
+	Một cậu bé dắt chó đi dạo về nhà, khi còn cách nhà $\SI{10}{m}$, con chó chạy về nhà với tốc độ $\SI{5}{m/s}$. Vừa đến nhà nó lại chạy ngay lại với tốc độ $\SI{3}{m/s}$. Tính tốc độ trung bình của chú chó trong quãng đường đi được kể từ lúc chạy về nhà đến lúc gặp lại cậu bé, biết cậu bé đi đều với tốc độ $\SI{1}{m/s}$. Kết quả tính theo đơn vị \si{\meter/\second}.
+	\shortans[oly]{$4$}
+	\loigiai{
+		Bỏ qua đoạn đường \SI{10}{\meter} về nhà đầu tiên thì tổng quãng đường chó chạy từ nhà đến chỗ cậu bé bằng tổng quãng đường chó chạy từ chỗ cậu bé về nhà $=s'$:
+		$$\dfrac{s}{v_1}+\dfrac{s'}{v_1}+\dfrac{s'}{v_2}=\dfrac{s}{v_b}\Leftrightarrow \dfrac{10}{5}+\dfrac{s'}{5}+\dfrac{s'}{3}=\dfrac{10}{1}\Rightarrow s'=\SI{15}{\meter}.$$
+		Tốc độ trung bình của chó:
+		$$v_{\mathrm{tb}}=\dfrac{10+2s'}{10}=\SI{4}{\meter/\second}.$$
+	}
+\end{ex}
+\Closesolutionfile{ans}
+\subsection{TỰ LUẬN}
+\setcounter{ex}{0}
+\Opensolutionfile{ans}[ans/G10Y25B3-TL]
 
 \begin{ex}
 	Hãy xác định các độ dịch chuyển mô tả ở hình trong tọa độ địa lí.
@@ -1338,15 +1689,6 @@ Hãy thiết lập phương trình chuyển động của một ô tô chuyển 
 		$+ d_3 = \SI{300}{m}\ \text{(Đông)}.$
 		
 		$+ d_4 = \SI{100}{m}\ \text{(Tây)}.$
-	}
-\end{ex}
-
-\begin{ex}
-	Một ô tô chuyển động trên đường thẳng. Tại thời điểm $t_1$, ô tô ở cách vị trí xuất phát $\SI{5}{km}$. Tại thời điểm $t_2$, ô tô cách vị trí xuất phát $\SI{12}{km}$. Từ $t_1$ đến $t_2$, độ dịch chuyển của ô tô đã thay đổi một đoạn bằng bao nhiêu?
-	\loigiai{	
-		Từ $t_1$ đến $t_2$, độ dịch chuyển của ô tô thay đổi một đoạn bằng 
-		
-		$$12-5 = \SI{7}{km}.$$
 	}
 \end{ex}
 
@@ -1429,7 +1771,7 @@ Hãy thiết lập phương trình chuyển động của một ô tô chuyển 
 \begin{ex}
 	Một người lái ô tô đi thẳng $\SI{6}{km}$ theo hướng Tây, sau đó rẽ trái đi thẳng theo hướng Nam $\SI{4}{km}$ rồi quay sang hướng Đông $\SI{3}{km}$. Xác định quãng đường đi được và độ dịch chuyển của ô tô.
 	\loigiai{	\begin{center}
-			\includegraphics[scale=0.4]{figs/G10Y25B3-12}
+			\includegraphics[scale=0.7]{figs/G10Y25B3-12}
 		\end{center}
 		Quãng đường đi được :
 		
@@ -1441,6 +1783,25 @@ Hãy thiết lập phương trình chuyển động của một ô tô chuyển 
 	}
 \end{ex}
 
+\begin{ex}
+	Bạn A đi học từ nhà đến trường theo lộ trình ABC. Biết bạn A đi đoạn đường $\text{AB} = \SI{400}{m}$ hết 6 phút, đoạn đường $\text{BC} = \SI{300}{m}$ hết 4 phút. Xác định tốc độ trung bình và vận tốc trung bình của bạn A khi đi từ nhà đến trường.
+	\begin{center}
+		\includegraphics[scale=1]{figs/G10Y25B3-32}
+	\end{center}
+	\loigiai{
+		Độ dịch chuyển của bạn A đến trường chính là độ dài $\text{AC}$.
+		Vì AB vuông góc với BC, áp dụng định lý Pitago:
+		$$\text{AC} = \sqrt{(\text{AB})^2 + (\text{BC})^2} = \sqrt{(\SI{400}{m})^2 + (\SI{300}{m})^2} = \sqrt{160000 + 90000}\ \si{m} = \sqrt{250000}\ \si{m} = \SI{500}{m}.$$
+		Tổng quãng đường bạn A đã đi:
+		$$s = \text{AB} + \text{BC} = \SI{400}{m} + \SI{300}{m} = \SI{700}{m}.$$
+		Tổng thời gian chuyển động:
+		$$t = \SI{6}{phút} + \SI{4}{phút} = \SI{10}{phút} = \SI{10}{} \cdot \SI{60}{s} = \SI{600}{s}.$$
+		Tốc độ trung bình:
+		$$v_{\text{tốc độ}} = \dfrac{s}{t} = \dfrac{\SI{700}{m}}{\SI{600}{s}} \approx \SI{1.17}{m/s}.$$
+		Vận tốc trung bình:
+		$$v_{\text{vận tốc}} = \dfrac{\text{AC}}{t} = \dfrac{\SI{500}{m}}{\SI{600}{s}} \approx \SI{0.83}{m/s}.$$
+	}
+\end{ex}
 
 \begin{ex}
 	Một người bơi ngang từ bờ bên này sang bờ bên kia của một dòng sông rộng $\SI{50}{m}$ có dòng chảy theo hướng từ Bắc xuống Nam. Do nước sông chảy mạnh nên khi sang đến bờ bên kia thì người đó đã trôi xuôi theo dòng nước $\SI{50}{m}$. Xác định độ dịch chuyển của người đó.
@@ -1457,19 +1818,7 @@ Hãy thiết lập phương trình chuyển động của một ô tô chuyển 
 		$$\Rightarrow\text{OB} = \sqrt{\text{OA}^2 + \text{AB}^2} = \SI{70,7}{m}.$$ 
 	}
 \end{ex}
-\begin{ex}
-	Hãy tính tốc độ trung bình ra m/s và km/h của nữ vận động viên tại một số giải thi đấu dựa vào bảng:
-	\begin{center}
-		\includegraphics[scale=0.5]{figs/G10Y25B3-16}
-	\end{center}
-	\loigiai{		Tốc độ trung bình của nữ vận động viên tại giải điền kinh quốc gia 2016 là:
-		$$v_\text{tb} = \dfrac{s}{t} =\dfrac{100}{\SI{11.64}{}} = \SI{8.6}{m/s} = \SI{30.96}{\kilo\meter/\hour}.$$
-		Tốc độ trung bình của nữ vận động viên tại SEA GAME 19, 2017 là:
-		$$v_\text{tb} = \dfrac{s}{t} =\dfrac{100}{\SI{11.56}{}} = \SI{8.65}{m/s} = \SI{31.14}{\kilo\meter/\hour}.$$
-		Tốc độ trung bình của nữ vận động viên tại SEA GAME 30, 2019 là:
-		$$v_\text{tb} = \dfrac{s}{t} =\dfrac{100}{\SI{11.54}{}}= \SI{8.67}{m/s} = \SI{31.19}{\kilo\meter/\hour}.$$
-	}
-\end{ex}
+
 
 \begin{ex}
 	Một người đi xe máy đi từ ngã tư với tốc độ trung bình $\SI{30}{\kilo\meter/\hour}$ theo hướng Bắc. Sau 3 phút người đó đến vị trí nào trên hình?
@@ -1498,14 +1847,6 @@ Hãy thiết lập phương trình chuyển động của một ô tô chuyển 
 \end{ex}
 
 \begin{ex}
-	Một người đi xe bắt đầu cho xe chạy trên đoạn đường thẳng: trong 10 giây đầu xe chạy được quãng đường $\SI{50}{m}$, trong 10 giây tiếp theo xe chạy được $\SI{150}{m}$. Tính tốc độ trung bình của xe máy trong khoảng thời gian nói trên.
-	\loigiai{
-		Tốc độ trung bình của xe máy:
-		$$v_\text{tb} = \dfrac{S_1 + S_2}{t_1 + t_2} = \dfrac{\SI{50}{m} + \SI{150}{m}}{\SI{10}{s} + \SI{10}{s}} = \dfrac{\SI{200}{m}}{\SI{20}{s}} = \SI{10}{m/s}.$$
-	}
-\end{ex}
-
-\begin{ex}
 	Một xe máy điện đi nửa đoạn đường đầu tiên với tốc độ trung bình $v_1 = \SI{24}{\kilo\meter/\hour}$ và nửa đoạn đường sau với tốc độ trung bình $v_2 = \SI{40}{\kilo\meter/\hour}$. Tính tốc độ trung bình trên cả đoạn đường.
 	\loigiai{Gọi $2s$ là chiều dài cả đoạn đường.
 		
@@ -1519,25 +1860,9 @@ Hãy thiết lập phương trình chuyển động của một ô tô chuyển 
 \end{ex}
 
 \begin{ex}
-	Một ô tô chạy trên đoạn đường thẳng từ A đến B phải mất khoảng thời gian $t$. Trong nửa đầu của khoảng thời gian này ô tô có tốc độ là $\SI{60}{\kilo\meter/\hour}$. Trong nửa khoảng thời gian cuối ô tô có tốc độ là $\SI{40}{\kilo\meter/\hour}$. Tính tốc độ trung bình trên cả đoạn AB.
-	\loigiai{
-		Quãng đường đi được trong nửa thời gian đầu: $s_1 = v_1 \cdot \dfrac{t}{2} = \SI{60}{\kilo\meter/\hour} \cdot \dfrac{t}{2}.$
-		Quãng đường đi được trong nửa thời gian cuối: $s_2 = v_2 \cdot \dfrac{t}{2} = \SI{40}{\kilo\meter/\hour} \cdot \dfrac{t}{2}.$
-		Tốc độ trung bình:
-		$$v_\text{tb} = \dfrac{S}{t} = \dfrac{s_1 + s_2}{t} = \dfrac{v_1\cdot\dfrac{t}{2}+v_2\cdot\dfrac{t}{2}}{t}=\dfrac{v_1 + v_2}{2} =\dfrac{\SI{60}{\kilo\meter/\hour} + \SI{40}{\kilo\meter/\hour}}{2} = \SI{50}{\kilo\meter/\hour}.$$		
-	}
-\end{ex}
-
-\begin{ex}
 	Một người đi xe đạp từ A đến B với tốc độ $\SI{12}{\kilo\meter/\hour}$ trong $\dfrac{1}{3}$ quãng đường, và tốc độ $\SI{18}{\kilo\meter/\hour}$ trong $\dfrac{2}{3}$ quãng đường còn lại. Tính tốc độ trung bình của người đó trên cả đoạn đường AB.
 	\loigiai{
-		Gọi $S$ là tổng quãng đường AB.
-		Thời gian đi $\dfrac{1}{3}$ quãng đường đầu:
-		$$t_1 = \dfrac{S/3}{v_1} = \dfrac{S}{3 \cdot \SI{12}{\kilo\meter/\hour}} = \dfrac{S}{\SI{36}{\kilo\meter/\hour}}.$$
-		Thời gian đi $\dfrac{2}{3}$ quãng đường còn lại:
-		$$t_2 = \dfrac{2S/3}{v_2} = \dfrac{2S}{3 \cdot \SI{18}{\kilo\meter/\hour}} = \dfrac{2S}{\SI{54}{\kilo\meter/\hour}} = \dfrac{S}{\SI{27}{\kilo\meter/\hour}}.$$
-		Tốc độ trung bình của người đó:
-		$$v_\text{tb} = \dfrac{S}{t_1 + t_2} = \dfrac{S}{\dfrac{S}{\SI{36}{\kilo\meter/\hour}} + \dfrac{S}{\SI{27}{\kilo\meter/\hour}}} = \dfrac{1}{\dfrac{1}{\SI{36}{\kilo\meter/\hour}} + \dfrac{1}{\SI{27}{\kilo\meter/\hour}}} \approx \SI{15.43}{\kilo\meter/\hour}.$$
+	$$v_{\mathrm{tb}}=\dfrac{1}{\dfrac{1}{3\cdot v_1}+\dfrac{2}{3\cdot v_2}}\approx\SI{15.4}{\kilo\meter/\hour}.$$
 	}
 \end{ex}
 
@@ -1545,174 +1870,48 @@ Hãy thiết lập phương trình chuyển động của một ô tô chuyển 
 	Một chiếc thuyền cao tốc đi từ bến A đến bến B. Trong $\dfrac{2}{3}$ thời gian đầu tốc độ của thuyền là $v_1 = \SI{45}{\kilo\meter/\hour}$, thời gian còn lại thuyền chuyển động với tốc độ $v_2$ bằng bao nhiêu để tốc độ trung bình của nó trên cả quãng đường AB là $v = \SI{48}{\kilo\meter/\hour}$?
 	\loigiai{
 		Gọi $t$ là tổng thời gian thuyền di chuyển.
-		Quãng đường đi được trong $\dfrac{2}{3}$ thời gian đầu: $s_1 = v_1 \cdot \dfrac{2t}{3} = \SI{45}{\kilo\meter/\hour} \cdot \dfrac{2t}{3} = \SI{30}{\kilo\meter/\hour} \cdot t.$
-		Quãng đường đi được trong thời gian còn lại ($\dfrac{1}{3}$ thời gian): $s_2 = v_2 \cdot \dfrac{t}{3}.$
-		Tốc độ trung bình của thuyền trên đoạn đường AB:
-		$$v_\text{tb}=\dfrac{s_1 + s_2}{t} = \dfrac{\SI{30}{\kilo\meter/\hour} \cdot t + v_2 \cdot \dfrac{t}{3}}{t}=\SI{30}{\kilo\meter/\hour}+\dfrac{v_2}{3}.$$
-		Theo đề bài, $v_\text{tb} = \SI{48}{\kilo\meter/\hour}$.
-		$$\SI{48}{\kilo\meter/\hour} = \SI{30}{\kilo\meter/\hour}+\dfrac{v_2}{3}$$
-		$$\Rightarrow \dfrac{v_2}{3} = \SI{48}{\kilo\meter/\hour} - \SI{30}{\kilo\meter/\hour} = \SI{18}{\kilo\meter/\hour}$$
-		$$\Rightarrow v_2=\SI{54}{\kilo\meter/\hour}.$$
-	}
+		$$v_{\mathrm{tb}}=\dfrac{v_1\cdot\dfrac{2t}{3}+v_2\cdot\dfrac{t}{3}}{t}\Leftrightarrow 48=\dfrac{2}{3}\cdot 45+\dfrac{v_2}{3}\Rightarrow v_2=\SI{54}{\kilo\meter/\hour}.$$	}
 \end{ex}
 
 \begin{ex}
 	Một người đua xe đạp đi trên $\dfrac{1}{3}$ quãng đường đầu với tốc độ $\SI{25}{\kilo\meter/\hour}$. Tính tốc độ của người đó đi trên đoạn đường còn lại. Biết rằng tốc độ trung bình trên cả đoạn đường là $v_\text{tb} = \SI{20}{\kilo\meter/\hour}$.
 	\loigiai{
 		Gọi $s$ là tổng chiều dài đoạn đường.
-		Thời gian đi $\dfrac{1}{3}$ quãng đường đầu: $t_1 = \dfrac{s/3}{v_1} = \dfrac{s}{3 \cdot \SI{25}{\kilo\meter/\hour}} = \dfrac{s}{\SI{75}{\kilo\meter/\hour}}.$
-		Thời gian đi $\dfrac{2}{3}$ quãng đường còn lại: $t_2 = \dfrac{2s/3}{v_2} = \dfrac{2s}{3v_2}.$
-		Tốc độ trung bình trên cả đoạn đường:
-		$$v_\text{tb}=\dfrac{s}{t_1+t_2}=\dfrac{s}{\dfrac{s}{\SI{75}{\kilo\meter/\hour}}+\dfrac{2s}{3v_2}}=\dfrac{1}{\dfrac{1}{\SI{75}{\kilo\meter/\hour}}+\dfrac{2}{3v_2}}$$
-		$$ \SI{20}{\kilo\meter/\hour}=\dfrac{1}{\dfrac{1}{\SI{75}{\kilo\meter/\hour}}+\dfrac{2}{3v_2}}$$
-		$$\Rightarrow \dfrac{1}{\SI{75}{\kilo\meter/\hour}}+\dfrac{2}{3v_2} = \dfrac{1}{\SI{20}{\kilo\meter/\hour}}$$
-		$$\dfrac{2}{3v_2} = \dfrac{1}{\SI{20}{\kilo\meter/\hour}} - \dfrac{1}{\SI{75}{\kilo\meter/\hour}} = \dfrac{15-4}{300}\ \text{h/km} = \dfrac{11}{300}\ \text{h/km}$$
-		$$v_2 = \dfrac{2}{3} \cdot \dfrac{300}{11}=\xsi{ \dfrac{200}{11}}{\kilo\meter/\hour}  \approx \SI{18.18}{\kilo\meter/\hour}.$$
+	$$v_{\mathrm{tb}}=\dfrac{s}{\dfrac{s}{3v_1}+\dfrac{2s}{3v_2}}\Leftrightarrow 20=\dfrac{1}{\dfrac{1}{3\cdot 25}+\dfrac{2}{3\cdot v_2}}\Rightarrow v_2\approx\SI{18.18}{\kilo\meter/\hour}.$$
 	}
 \end{ex}
 
 \begin{ex}
 	Một ô tô đi trên quãng đường AB với tốc độ trung bình $\SI{54}{\kilo\meter/\hour}$. Nếu giảm tốc độ trung bình đi $\SI{9}{\kilo\meter/\hour}$ thì ôtô đến B trễ hơn dự định 45 phút. Tính quãng đường AB và thời gian dự tính để đi quãng đường đó.
-	\loigiai{Gọi $t$ là thời gian dự định để đi quãng đường AB (đơn vị: giờ), $v$ là tốc độ trung bình ban đầu và $s$ là chiều dài quãng đường AB.
-		Phương trình chuyển động cho trường hợp đi đúng tốc độ trung bình dự kiến:
-		\begin{equation}
-			\label{eq:1}
-			s=vt=\SI{54}{\kilo\meter/\hour} \cdot t
-		\end{equation}
-		Khi giảm tốc độ trung bình đi $\SI{9}{\kilo\meter/\hour}$, tốc độ mới là $\SI{54}{\kilo\meter/\hour} - \SI{9}{\kilo\meter/\hour} = \SI{45}{\kilo\meter/\hour}$.
-		Thời gian đến B trễ hơn dự định 45 phút, tức là $t + \SI{45}{\minute} = t + \dfrac{\SI{45}{}}{\SI{60}{}}\ \text{h} = t + \SI{0.75}{\hour}$.
-		Phương trình chuyển động cho trường hợp đi chậm hơn:
-		\begin{equation}
-			\label{eq:2}
-			s=\left(\SI{54}{\kilo\meter/\hour}- \SI{9}{\kilo\meter/\hour}\right)\left(t+\SI{0.75}{\hour}\right)=\SI{45}{\kilo\meter/\hour}\left(t+\SI{0.75}{\hour}\right)
-		\end{equation}
-		Từ phương trình (\ref{eq:1}) và phương trình (\ref{eq:2}), ta có:
-		$$\SI{54}{\kilo\meter/\hour} \cdot t = \SI{45}{\kilo\meter/\hour}\left(t+\SI{0.75}{\hour}\right)$$
-		$$54t = 45t + 45 \cdot 0.75$$
-		$$9t = 33.75$$
-		$$t = \dfrac{33.75}{9} = \SI{3.75}{\hour}.$$
-		Thời gian dự tính để đi quãng đường đó là $\SI{3.75}{\hour}$.
-		
-		Chiều dài quãng đường AB: $s=\SI{54}{\kilo\meter/\hour} \cdot \SI{3.75}{\hour}=\SI{202.5}{\kilo\meter}$.
+	\loigiai{
+		$$t_2-t_1=\SI{0.75}{\hour}\Leftrightarrow \dfrac{s}{45}-\dfrac{s}{54}=0,75\Rightarrow s=\SI{202.5}{\kilo\meter}.$$
+		Thời gian đi dự kiến:
+		$$t_1=\dfrac{s}{v_1}=\dfrac{202,5}{54}=\SI{3.75}{\hour}.$$
 	}
 \end{ex}
 
-\begin{ex}
-	Một cậu bé dắt chó đi dạo về nhà, khi còn cách nhà $\SI{10}{m}$, con chó chạy về nhà với tốc độ $\SI{5}{m/s}$. Vừa đến nhà nó lại chạy ngay lại với tốc độ $\SI{3}{m/s}$. Tính tốc độ trung bình của chú chó trong quãng đường đi được kể từ lúc chạy về nhà đến lúc gặp lại cậu bé, biết cậu bé đi đều với tốc độ $\SI{1}{m/s}$.
-	\loigiai{
-		Thời gian chú chó chạy từ vị trí cách nhà $\SI{10}{m}$ về đến nhà là:
-		$$t_1 = \dfrac{s_1}{v_c} = \dfrac{\SI{10}{m}}{\SI{5}{m/s}} = \SI{2}{s}.$$
-		Trong thời gian $t_1$ đó, cậu bé đi được quãng đường là:
-		$$s_n = t_1 \cdot v_n = \SI{2}{s} \cdot \SI{1}{m/s} = \SI{2}{m}.$$
-		Khoảng cách từ cậu bé đến nhà lúc đó (khi chó đã về đến nhà) là:
-		$$s' = \SI{10}{m} - s_n = \SI{10}{m} - \SI{2}{m} = \SI{8}{m}.$$
-		Sau đó, chó chạy ngược lại gặp cậu bé. Cậu bé và chó chuyển động ngược chiều về phía nhau.
-		Thời gian chú chó chạy từ nhà tới lúc gặp lại cậu bé là:
-		$$t_2 = \dfrac{s'}{v_c + v_n} = \dfrac{\SI{8}{m}}{\SI{3}{m/s} + \SI{1}{m/s}} = \dfrac{\SI{8}{m}}{\SI{4}{m/s}} = \SI{2}{s}.$$
-		Quãng đường chú chó đã quay lại một đoạn là:
-		$$s_2 = v_c \cdot t_2 = \SI{3}{m/s} \cdot \SI{2}{s} = \SI{6}{m}.$$
-		Tổng quãng đường chú chó đã đi được kể từ lúc chạy về nhà đến lúc gặp lại cậu bé là:
-		$$S_{\text{chó}} = s_1 + s_2 = \SI{10}{m} + \SI{6}{m} = \SI{16}{m}.$$
-		Tổng thời gian chú chó chuyển động trong quá trình này là:
-		$$T_{\text{chó}} = t_1 + t_2 = \SI{2}{s} + \SI{2}{s} = \SI{4}{s}.$$
-		Tốc độ trung bình của chú chó trong quãng đường đi được kể từ lúc chạy về nhà đến lúc gặp lại cậu bé là: 
-		$$v_{\text{tb}} = \dfrac{S_{\text{chó}}}{T_{\text{chó}}} = \dfrac{\SI{16}{m}}{\SI{4}{s}} = \SI{4}{m/s}.$$
-	}
-\end{ex}
+
 
 \begin{ex}
 	Một người đi xe máy chuyển động trên đường thẳng theo 3 giai đoạn: Giai đoạn 1 chuyển động với tốc độ không đổi $v_1 = \SI{30}{\kilo\meter/\hour}$ trong $\SI{10}{\kilo\meter}$ đầu tiên; giai đoạn 2 chuyển động với tốc độ $v_2 = \SI{40}{\kilo\meter/\hour}$ trong 30 phút; giai đoạn 3 chuyển động trên đoạn đường $\SI{4}{\kilo\meter}$ trong 10 phút. Tính tốc độ trung bình trên cả đoạn đường.
 	\loigiai{
-		Thời gian xe máy chuyển động giai đoạn 1:
-		$$t_1 = \dfrac{s_1}{v_1} = \dfrac{\SI{10}{\kilo\meter}}{\SI{30}{\kilo\meter/\hour}} = \dfrac{1}{3}\ \text{h}.$$
-		Quãng đường giai đoạn 2:
-		$$s_2 = v_2t_2 = \SI{40}{\kilo\meter/\hour} \cdot \SI{30}{\minute} = \SI{40}{\kilo\meter/\hour} \cdot \dfrac{30}{60}\ \text{h} = \SI{20}{\kilo\meter}.$$
-		Thời gian giai đoạn 3: $\SI{10}{\minute} = \dfrac{10}{60}\ \text{h} = \dfrac{1}{6}\ \text{h}.$
-		
-		Tổng quãng đường đã đi:
-		$$s = s_1 + s_2 + s_3 = \SI{10}{\kilo\meter} + \SI{20}{\kilo\meter} + \SI{4}{\kilo\meter} = \SI{34}{\kilo\meter}.$$
-		Tổng thời gian chuyển động:
-		$$t = t_1 + t_2 + t_3 = \dfrac{1}{3}\ \text{h} + \dfrac{30}{60}\ \text{h} + \dfrac{10}{60}\ \text{h} = \dfrac{1}{3}\ \text{h} + \dfrac{1}{2}\ \text{h} + \dfrac{1}{6}\ \text{h} = \dfrac{2+3+1}{6}\ \text{h} = \dfrac{6}{6}\ \text{h} = \SI{1}{\hour}.$$
-		Tốc độ trung bình của xe máy trên cả đoạn đường:
-		$$v_\text{tb} = \dfrac{s}{t} = \dfrac{\SI{34}{\kilo\meter}}{\SI{1}{\hour}} = \SI{34}{\kilo\meter/\hour}.$$
+		Tốc độ trung bình của xe máy trên cả đoạn đường là $v_\text{tb} = \SI{34}{\kilo\meter/\hour}$.
 	}
 \end{ex}
 
 \begin{ex}
-	Một ô tô chuyển động trên đoạn đường MN. Trong một phần hai quãng đường đầu đi với $v = \SI{40}{\kilo\meter/\hour}$. Trong một phần hai quãng đường còn lại đi trong một phần hai thời gian đầu với $v = \SI{75}{\kilo\meter/\hour}$ và trong một phần hai thời gian cuối đi với $v = \SI{45}{\kilo\meter/\hour}$. Tính tốc độ trung bình trên đoạn MN.
+	Một ô tô chuyển động trên đoạn đường MN. Trong một phần hai quãng đường đầu đi với $v_1 = \SI{40}{\kilo\meter/\hour}$. Trong một phần hai quãng đường còn lại đi trong một phần hai thời gian đầu với $v_2 = \SI{75}{\kilo\meter/\hour}$ và trong một phần hai thời gian cuối đi với $v_3 = \SI{45}{\kilo\meter/\hour}$. Tính tốc độ trung bình trên đoạn MN.
 	\loigiai{
-		Gọi $S$ là chiều dài đoạn đường MN.
-		Nửa quãng đường đầu ($S/2$) đi với tốc độ $v_1 = \SI{40}{\kilo\meter/\hour}$.
-		Thời gian đi nửa quãng đường đầu là: $t_1 = \dfrac{S/2}{v_1} = \dfrac{S}{2 \cdot \SI{40}{\kilo\meter/\hour}} = \dfrac{S}{\SI{80}{\kilo\meter/\hour}}.$
-		
-		Xét nửa quãng đường còn lại ($S/2$). Gọi $t'$ là tổng thời gian đi nửa quãng đường này.
-		Trong nửa thời gian đầu ($t'/2$), tốc độ là $v_2 = \SI{75}{\kilo\meter/\hour}$. Quãng đường: $s_{2a} = v_2 \cdot \dfrac{t'}{2}.$
-		Trong nửa thời gian cuối ($t'/2$), tốc độ là $v_3 = \SI{45}{\kilo\meter/\hour}$. Quãng đường: $s_{2b} = v_3 \cdot \dfrac{t'}{2}.$
-		Tổng quãng đường trong giai đoạn này là $S/2 = s_{2a} + s_{2b} = v_2 \cdot \dfrac{t'}{2} + v_3 \cdot \dfrac{t'}{2} = \dfrac{t'}{2}(v_2 + v_3).$
-		Tốc độ trung bình trong nửa quãng đường cuối (từ đây ta có thể tính tốc độ trung bình cho nửa sau):
-		$$v_{\text{tb2}}=\dfrac{s_{2a}+s_{2b}}{t'} = \dfrac{\dfrac{t'}{2}(v_2+v_3)}{t'} = \dfrac{v_2+v_3}{2} = \dfrac{\SI{75}{\kilo\meter/\hour}+\SI{45}{\kilo\meter/\hour}}{2} = \dfrac{\SI{120}{\kilo\meter/\hour}}{2} = \SI{60}{\kilo\meter/\hour}.$$
-		Thời gian đi nửa quãng đường cuối là: $t_2 = \dfrac{S/2}{v_{\text{tb2}}} = \dfrac{S/2}{\SI{60}{\kilo\meter/\hour}} = \dfrac{S}{\SI{120}{\kilo\meter/\hour}}.$
-		
-		Tổng thời gian đi trên cả đoạn MN là: $T = t_1 + t_2 = \dfrac{S}{\SI{80}{\kilo\meter/\hour}} + \dfrac{S}{\SI{120}{\kilo\meter/\hour}} = S \left( \dfrac{1}{80} + \dfrac{1}{120} \right)\ \text{h/km} = S \left( \dfrac{3+2}{240} \right)\ \text{h/km} = S \cdot \dfrac{5}{240}\ \text{h/km} = \dfrac{S}{\SI{48}{\kilo\meter/\hour}}.$
-		Tốc độ trung bình trên cả đoạn MN:
-		$$v_\text{tb}=\dfrac{S}{T} = \dfrac{S}{S/\SI{48}{\kilo\meter/\hour}} = \SI{48}{\kilo\meter/\hour}.$$
+	Tốc độ trung bình nửa đoạn đường cuối:
+	$$v^\prime_2=\dfrac{v_2+v_3}{2}=\SI{60}{\kilo\meter/\hour}.$$
+	Tốc độ trung bình trên của đoạn đường:
+	$$v_{\mathrm{tb}}=\dfrac{1}{\dfrac{1}{2v_1}+\dfrac{1}{2v^\prime_2}}=\SI{48}{\kilo\meter/\hour}.$$
 	}
 \end{ex}
 
-\begin{ex}
-	Một người đi xe máy trên một đoạn đường thẳng AB. Trên một phần ba đoạn đường đầu đi với $v_1 = \SI{30}{\kilo\meter/\hour}$, một phần ba đoạn đường tiếp theo với $v_2 = \SI{36}{\kilo\meter/\hour}$ và một phần ba đoạn đường cuối cùng đi với $v_3= \SI{48}{\kilo\meter/\hour}$. Tính $v_\text{tb}$ trên cả đoạn AB.
-	\loigiai{
-		Gọi $S$ là tổng chiều dài đoạn đường AB.
-		Thời gian đi một phần ba đoạn đường đầu: $t_1 = \dfrac{S/3}{v_1} = \dfrac{S}{3 \cdot \SI{30}{\kilo\meter/\hour}} = \dfrac{S}{\SI{90}{\kilo\meter/\hour}}.$
-		Thời gian đi một phần ba đoạn đường tiếp theo: $t_2 = \dfrac{S/3}{v_2} = \dfrac{S}{3 \cdot \SI{36}{\kilo\meter/\hour}} = \dfrac{S}{\SI{108}{\kilo\meter/\hour}}.$
-		Thời gian đi một phần ba đoạn đường cuối cùng: $t_3 = \dfrac{S/3}{v_3} = \dfrac{S}{3 \cdot \SI{48}{\kilo\meter/\hour}} = \dfrac{S}{\SI{144}{\kilo\meter/\hour}}.$
-		
-		Tổng thời gian đi trên cả đoạn đường AB là:
-		$$T = t_1 + t_2 + t_3 = S \left( \dfrac{1}{90} + \dfrac{1}{108} + \dfrac{1}{144} \right)\ \text{h/km}.$$
-		Tìm bội chung nhỏ nhất của 90, 108, 144.
-		$90 = 2 \cdot 3^2 \cdot 5$
-		$108 = 2^2 \cdot 3^3$
-		$144 = 2^4 \cdot 3^2$
-		BCNN($90, 108, 144$) = $2^4 \cdot 3^3 \cdot 5 = 16 \cdot 27 \cdot 5 = 2160.$
-		
-		$$T = S \left( \dfrac{2160/90}{2160} + \dfrac{2160/108}{2160} + \dfrac{2160/144}{2160} \right)\ \text{h/km} = S \left( \dfrac{24+20+15}{2160} \right)\ \text{h/km} = S \cdot \dfrac{59}{2160}\ \text{h/km}.$$
-		Tốc độ trung bình trên cả đoạn đường AB:
-		$$v_\text{tb}=\dfrac{S}{T} = \dfrac{S}{S \cdot \dfrac{59}{2160}\ \text{h/km}} = \xsi{\dfrac{2160}{59}}{\kilo\meter/\hour}\approx \SI{36.61}{\kilo\meter/\hour}.$$
-	}
-\end{ex}
-\begin{ex}
-	Hãy tính quãng đường đi được, độ dịch chuyển, tốc độ, vận tốc của bạn A khi đi từ nhà đến trường và khi đi từ trường đến siêu thị. Coi chuyển động của bạn A là chuyển động đều và biết cứ $\SI{100}{m}$ bạn A đi hết $\SI{25}{s}$.
-	\begin{center}
-		\includegraphics[scale=0.9]{figs/G10Y25B3-31}
-	\end{center}
-	\loigiai{
-		Vì bạn A đi từ nhà đến trường là theo 1 hướng, không đổi hướng nên:
-		Quãng đường đi được và độ dịch chuyển là như nhau và bằng $\SI{1000}{m}$.
-		Vận tốc và tốc độ là như nhau và bằng:
-		$$v = \dfrac{d}{t} = \dfrac{\SI{100}{m}}{\SI{25}{s}} = \SI{4}{m/s}.$$
-		Tương tự, khi đi từ trường đến siêu thị thì quãng đường và độ dịch chuyển bằng nhau và bằng $\SI{200}{\meter}$.
-	}
-\end{ex}
 
-\begin{ex}
-	Bạn A đi học từ nhà đến trường theo lộ trình ABC. Biết bạn A đi đoạn đường $\text{AB} = \SI{400}{m}$ hết 6 phút, đoạn đường $\text{BC} = \SI{300}{m}$ hết 4 phút. Xác định tốc độ trung bình và vận tốc trung bình của bạn A khi đi từ nhà đến trường.
-	\begin{center}
-		\includegraphics[scale=1]{figs/G10Y25B3-32}
-	\end{center}
-	\loigiai{
-		Độ dịch chuyển của bạn A đến trường chính là độ dài $\text{AC}$.
-		Vì AB vuông góc với BC, áp dụng định lý Pitago:
-		$$\text{AC} = \sqrt{(\text{AB})^2 + (\text{BC})^2} = \sqrt{(\SI{400}{m})^2 + (\SI{300}{m})^2} = \sqrt{160000 + 90000}\ \si{m} = \sqrt{250000}\ \si{m} = \SI{500}{m}.$$
-		Tổng quãng đường bạn A đã đi:
-		$$s = \text{AB} + \text{BC} = \SI{400}{m} + \SI{300}{m} = \SI{700}{m}.$$
-		Tổng thời gian chuyển động:
-		$$t = \SI{6}{phút} + \SI{4}{phút} = \SI{10}{phút} = \SI{10}{} \cdot \SI{60}{s} = \SI{600}{s}.$$
-		Tốc độ trung bình:
-		$$v_{\text{tốc độ}} = \dfrac{s}{t} = \dfrac{\SI{700}{m}}{\SI{600}{s}} \approx \SI{1.17}{m/s}.$$
-		Vận tốc trung bình:
-		$$v_{\text{vận tốc}} = \dfrac{\text{AC}}{t} = \dfrac{\SI{500}{m}}{\SI{600}{s}} \approx \SI{0.83}{m/s}.$$
-	}
-\end{ex}
+
+
 
 \begin{ex}
 	Hãy vẽ đồ thị độ dịch chuyển - thời gian trong chuyển động của A theo bảng ghi số liệu vào vở. Trên trục tung (trục độ dịch chuyển) $\SI{1}{cm}$ ứng với $\SI{200}{m}$; trên trục hoành (trục thời gian) $\SI{1}{cm}$ ứng với $\SI{50}{s}$.
@@ -1770,5 +1969,45 @@ Hãy thiết lập phương trình chuyển động của một ô tô chuyển 
 		\end{enumerate}
 	}
 \end{ex}
+% ===============================================================
+\begin{ex}
+\immini{	Trên hình vẽ là đồ thị toạ độ - thời gian của hai vật (I) và (II)
+	\begin{enumerate}
+		\item Dựa vào đồ thị, hãy xác định tính chất chuyển động và vận tốc chuyển động của mỗi vật.
+		\item Lập phương trình chuyển động của mỗi vật.
+		\item Xác định vị trí và thời điểm hai vật gặp nhau.
+\end{enumerate}}{
+\begin{tikzpicture}  
+	\begin{axis}[  ultra thick,
+		xmin=-2.5,  
+		xmax=7,  
+		xtick={-2,0,...,6},
+		ytick={-20,0,...,60},
+		minor x tick num=1,
+		minor y tick num=1,
+		ymin=-25,  
+		ymax=70, 
+		samples=300,
+		axis lines=center, 
+		grid style={step=1, line width =0.4pt, color=gray!40!white},
+		grid=both, %giới hạn ô lưới
+		major grid style={line width=0.8pt,gray!75!white},
+		xlabel=$\xsi{t}{\left(\si{\hour}\right)}$, 		ylabel=$\xsi{x}{\left(\si{\kilo\meter}\right)}$,
+		every axis y label/.style={at=(current axis.above origin),anchor=south},  
+		every axis x label/.style={at=(current axis.right of origin),anchor=west},  ] 
+		\addplot [line width=2pt, red, smooth, domain=0:6] {10*x} node[below] {$(I)$}; 
+		\addplot [line width=2pt, blue, smooth, domain=-2:6] {30-5*x} node[above] {$(II)$};  
+		\coordinate (O) at (axis cs: 0,0);
+	\end{axis}  
+	\node[below left] at (O) {0};
+\end{tikzpicture}
 
+}
+	\loigiai{
+		\begin{enumerate}[label=\alph*)]
+			\item $v_I=\SI{10}{\kilo\meter/\hour}$, $v_{II}=\SI{-5}{\kilo\meter/\hour}$.
+\item $x_I=	10t$; $x_{II}=30-5t$.
+\item Gặp nhau lúc \SI{2}{\hour} tại vị trí cách gốc tọa độ \SI{20}{\kilo\meter}.	
+\end{enumerate}}
+\end{ex}
 \Closesolutionfile{ans}

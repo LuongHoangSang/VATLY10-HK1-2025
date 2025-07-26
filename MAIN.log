@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.9)  29 JUN 2025 09:18
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.9)  26 JUL 2025 22:15
+>>>>>>> Stashed changes
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2342,6 +2346,7 @@ File: utxsyc.fd 2000/12/15 v3.1
 
 
 {c:/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-t5.enc}{c:/texlive/2024/
+<<<<<<< Updated upstream
 texmf-dist/fonts/enc/dvips/vntex/t5.enc}] (./data17/G10Y25B1.tex
 Ch∆∞∆°ng 1.
 LaTeX Font Info:    Calculating math sizes for size <16> on input line 1.
@@ -2389,22 +2394,42 @@ LaTeX Font Info:    Trying to load font information for T5+put on input line 1.
 File: t5put.fd 2006/07/30 Fontinst v1.927 font definitions for T5/put.
 )
 LaTeX Font Info:    Trying to load font information for TS1+qag on input line 2
+=======
+texmf-dist/fonts/enc/dvips/vntex/t5.enc}] (./data17/G10Y25B4.tex
+LaTeX Font Info:    Trying to load font information for TS1+qag on input line 1
+>>>>>>> Stashed changes
 .
 
 (c:/texlive/2024/texmf-dist/tex/latex/tex-gyre/ts1qag.fd
 File: ts1qag.fd 2009/09/25 v1.2 font definition file for TS1/qag
 )
-Overfull \hbox (1.0pt too wide) in paragraph at lines 3--3
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 1.
+
+
+Overfull \hbox (1.0pt too wide) in paragraph at lines 2--2
 |[][]
  []
 
+LaTeX Font Info:    Trying to load font information for T5+put on input line 4.
+
+(c:/texlive/2024/texmf-dist/tex/latex/vntex/t5put.fd
+File: t5put.fd 2006/07/30 Fontinst v1.927 font definitions for T5/put.
+)
 LaTeX Font Info:    Trying to load font information for U+fontawesometwo on inp
+<<<<<<< Updated upstream
 ut line 11.
+=======
+ut line 10.
+
+>>>>>>> Stashed changes
 (c:/texlive/2024/texmf-dist/tex/latex/fontawesome/ufontawesometwo.fd
 File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
 
 LaTeX Font Warning: Font shape `U/fontawesometwo/b/n' undefined
+<<<<<<< Updated upstream
 (Font)              using `U/fontawesometwo/m/n' instead on input line 11.
 
 LaTeX Font Info:    Trying to load font information for U+fontawesomethree on i
@@ -2424,6 +2449,15 @@ Package pdftex.def Info: figs/G10Y25B1-2.jpg  used on input line 37.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+=======
+(Font)              using `U/fontawesometwo/m/n' instead on input line 10.
+
+<figs/G10Y25B4-1.jpg, id=58, 856.6404pt x 277.5168pt>
+File: figs/G10Y25B4-1.jpg Graphic file (type jpg)
+<use figs/G10Y25B4-1.jpg>
+Package pdftex.def Info: figs/G10Y25B4-1.jpg  used on input line 26.
+(pdftex.def)             Requested size: 428.31915pt x 138.75806pt.
+>>>>>>> Stashed changes
 
 
 
@@ -2433,17 +2467,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
+<logo/logocut.jpg, id=61, 1284.8pt x 1284.8pt>
 File: logo/logocut.jpg Graphic file (type jpg)
 <use logo/logocut.jpg>
+<<<<<<< Updated upstream
 Package pdftex.def Info: logo/logocut.jpg  used on input line 38.
 (pdftex.def)             Requested size: 42.67912pt x 42.58736pt.
+=======
+Package pdftex.def Info: logo/logocut.jpg  used on input line 31.
+(pdftex.def)             Requested size: 42.67912pt x 42.67886pt.
+>>>>>>> Stashed changes
 
 Underfull \hbox (badness 10000) has occurred while \output is active
  [][][][]\T5/qag/m/n/10 ThΩch sË n†o gÂi sË ^^_‚\U/fontawesometwo/m/n/10 ‘[][]
  []
 
-[2
+[2{c:/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{c:/texlive/20
+24/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc} <./figs/G10Y25B4-
+1.jpg> <./logo/logocut.jpg>]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
 
+<<<<<<< Updated upstream
 {c:/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{c:/texlive/2024
 /texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc}{c:/texlive/2024/tex
 mf-dist/fonts/enc/dvips/fontawesome/fontawesomethree.enc} <./logo/logocut.jpg>]
@@ -2496,10 +2541,14 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [4 <./figs/G10Y25B1-3.jpg>]
 Overfull \hbox (1.0pt too wide) in paragraph at lines 84--84
+=======
+Overfull \hbox (1.0pt too wide) in paragraph at lines 136--136
+>>>>>>> Stashed changes
 |[][]
  []
 
 
+<<<<<<< Updated upstream
 Overfull \hbox (5.69046pt too wide) in paragraph at lines 85--85
  []| $[]$[] 
  []
@@ -2531,6 +2580,14 @@ Overfull \hbox (5.69046pt too wide) in paragraph at lines 111--111
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+=======
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 137--137
+ []| $[]$[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 
@@ -2542,13 +2599,135 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: logo/logocut.jpg Graphic file (type jpg)
 <use logo/logocut.jpg>
-Package pdftex.def Info: logo/logocut.jpg  used on input line 124.
-(pdftex.def)             Requested size: 42.67912pt x 42.58736pt.
+Package pdftex.def Info: logo/logocut.jpg  used on input line 138.
+(pdftex.def)             Requested size: 42.67912pt x 42.67886pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
  [][][][]\T5/qag/m/n/10 ThΩch sË n†o gÂi sË ^^_‚\U/fontawesometwo/m/n/10 ‘[][]
  []
 
+[3]
+LaTeX Font Info:    Trying to load font information for U+fontawesomeone on inp
+ut line 152.
+ (c:/texlive/2024/texmf-dist/tex/latex/fontawesome/ufontawesomeone.fd
+File: ufontawesomeone.fd 2016/05/22 Font definitions for U/fontawesomeone.
+)
+
+LaTeX Font Warning: Font shape `U/fontawesomeone/bx/n' undefined
+(Font)              using `U/fontawesomeone/m/n' instead on input line 152.
+
+
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 166--166
+ []| $[]$[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+File: logo/logocut.jpg Graphic file (type jpg)
+<use logo/logocut.jpg>
+Package pdftex.def Info: logo/logocut.jpg  used on input line 222.
+(pdftex.def)             Requested size: 42.67912pt x 42.67886pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T5/qag/m/n/10 ThΩch sË n†o gÂi sË ^^_‚\U/fontawesometwo/m/n/10 ‘[][]
+ []
+
+[4{c:/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome/fontawesomeone.enc}]
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 276--276
+ []| $[]$[] 
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+File: logo/logocut.jpg Graphic file (type jpg)
+<use logo/logocut.jpg>
+Package pdftex.def Info: logo/logocut.jpg  used on input line 281.
+(pdftex.def)             Requested size: 42.67912pt x 42.67886pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T5/qag/m/n/10 ThΩch sË n†o gÂi sË ^^_‚\U/fontawesometwo/m/n/10 ‘[][]
+ []
+
+[5]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+File: logo/logocut.jpg Graphic file (type jpg)
+<use logo/logocut.jpg>
+Package pdftex.def Info: logo/logocut.jpg  used on input line 327.
+(pdftex.def)             Requested size: 42.67912pt x 42.67886pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T5/qag/m/n/10 ThΩch sË n†o gÂi sË ^^_‚\U/fontawesometwo/m/n/10 ‘[][]
+ []
+
+[6]
+Overfull \hbox (1.0pt too wide) in paragraph at lines 329--329
+|[][]
+ []
+
+Output from handle ans going to ans/G10Y25B4-TN.tex
+\ans@file=\write8
+\openout8 = `ans/G10Y25B4-TN.tex'.
+
+LaTeX Font Info:    Trying to load font information for T5+pag on input line 33
+3.
+(c:/texlive/2024/texmf-dist/tex/latex/vntex/t5pag.fd
+File: t5uag.fd 2005/08/24 Fontinst v1.929 font definitions for T5/pag.
+)
+LaTeX Font Info:    Font shape `T5/pag/bx/n' in size <12> not available
+(Font)              Font shape `T5/pag/b/n' tried instead on input line 333.
+LaTeX Font Info:    Font shape `T5/pag/b/n' in size <12> not available
+(Font)              Font shape `T5/pag/db/n' tried instead on input line 333.
+Package hyperref Info: bookmark level for unknown ex defaults to 0 on input lin
+e 333.
+>>>>>>> Stashed changes
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+File: logo/logocut.jpg Graphic file (type jpg)
+<use logo/logocut.jpg>
+<<<<<<< Updated upstream
+Package pdftex.def Info: logo/logocut.jpg  used on input line 124.
+(pdftex.def)             Requested size: 42.67912pt x 42.58736pt.
+=======
+Package pdftex.def Info: logo/logocut.jpg  used on input line 381.
+(pdftex.def)             Requested size: 42.67912pt x 42.67886pt.
+>>>>>>> Stashed changes
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T5/qag/m/n/10 ThΩch sË n†o gÂi sË ^^_‚\U/fontawesometwo/m/n/10 ‘[][]
+ []
+
+<<<<<<< Updated upstream
 [5{c:/texlive/2024/texmf-dist/fonts/enc/dvips/fontawesome/fontawesomeone.enc} <
 ./figs/G10Y25B1-4.png>]
 Overfull \hbox (1.0pt too wide) in paragraph at lines 126--126
@@ -2595,12 +2774,64 @@ Overfull \hbox (1.0pt too wide) in paragraph at lines 191--191
 
 Output from handle ans going to ans/G10Y25B1-TF.tex
 \openout8 = `ans/G10Y25B1-TF.tex'.
+=======
+[7]
+Overfull \hbox (85.06622pt too wide) detected at line 450
+\OML/cmm/m/it/12 t \OT1/cmr/m/n/12 = [] + [] = [] + [] = [] + [] = 0[]833 h + 1
+[]667 h = 2[]5 h\OML/cmm/m/it/12 :
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+File: logo/logocut.jpg Graphic file (type jpg)
+<use logo/logocut.jpg>
+Package pdftex.def Info: logo/logocut.jpg  used on input line 450.
+(pdftex.def)             Requested size: 42.67912pt x 42.67886pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T5/qag/m/n/10 ThΩch sË n†o gÂi sË ^^_‚\U/fontawesometwo/m/n/10 ‘[][]
+ []
+
+[8]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+File: logo/logocut.jpg Graphic file (type jpg)
+<use logo/logocut.jpg>
+Package pdftex.def Info: logo/logocut.jpg  used on input line 520.
+(pdftex.def)             Requested size: 42.67912pt x 42.67886pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T5/qag/m/n/10 ThΩch sË n†o gÂi sË ^^_‚\U/fontawesometwo/m/n/10 ‘[][]
+ []
+
+[9]
+Overfull \hbox (1.0pt too wide) in paragraph at lines 530--530
+|[][]
+ []
+
+Output from handle ans going to ans/G10Y25B4-TF.tex
+\openout8 = `ans/G10Y25B4-TF.tex'.
+>>>>>>> Stashed changes
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{ex.1}) has be
 en already used, duplicate ignored
 <to be read again> 
                    \relax 
+<<<<<<< Updated upstream
 l.201 	{}
          
 Overfull \hbox (42.36542pt too wide) in paragraph at lines 201--201
@@ -2616,6 +2847,275 @@ Output from handle ans going to ans/G10Y25B1-TL.tex
 \openout8 = `ans/G10Y25B1-TL.tex'.
 
 )
+=======
+l.534 	H
+        ai xe bu√Ωt xu·∫•t ph√°t c√πng l√∫c t·ª´ hai b·∫øn A v√† B c√°ch nha...
+<figs/G10Y25B4-7.jpg, id=144, 491.33563pt x 74.2775pt>
+File: figs/G10Y25B4-7.jpg Graphic file (type jpg)
+<use figs/G10Y25B4-7.jpg>
+Package pdftex.def Info: figs/G10Y25B4-7.jpg  used on input line 536.
+(pdftex.def)             Requested size: 393.06903pt x 59.42207pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{ex.2}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.546 	M
+        ·ªôt con t√†u ƒëang chuy·ªÉn ƒë·ªông v·ªõi t·ªëc ƒë·ªô $v = \SI{4}{\...
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+File: logo/logocut.jpg Graphic file (type jpg)
+<use logo/logocut.jpg>
+Package pdftex.def Info: logo/logocut.jpg  used on input line 551.
+(pdftex.def)             Requested size: 42.67912pt x 42.67886pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T5/qag/m/n/10 ThΩch sË n†o gÂi sË ^^_‚\U/fontawesometwo/m/n/10 ‘[][]
+ []
+
+[10 <./figs/G10Y25B4-7.jpg>]
+pdfTeX warning (ext4): destination with the same identifier (name{ex.3}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.563 	T
+        r√™n m·ªôt xe √¥t√¥ mui tr·∫ßn ƒëang chuy·ªÉn ƒë·ªông v·ªõi t·ªëc ƒë...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ex.4}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.579 	M
+        ·ªôt s√†n lan c√≥ chi·ªÅu d√†i $\SI{60}{\metre}$ ƒëang chuy·ªÉn ƒë·ª...
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+File: logo/logocut.jpg Graphic file (type jpg)
+<use logo/logocut.jpg>
+Package pdftex.def Info: logo/logocut.jpg  used on input line 584.
+(pdftex.def)             Requested size: 42.67912pt x 42.67886pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T5/qag/m/n/10 ThΩch sË n†o gÂi sË ^^_‚\U/fontawesometwo/m/n/10 ‘[][]
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 600--600
+
+ []
+
+
+Overfull \hbox (1.0pt too wide) in paragraph at lines 605--605
+|[][]
+ []
+
+Output from handle ans going to ans/G10Y25B4-SA.tex
+\openout8 = `ans/G10Y25B4-SA.tex'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{ex.1}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.610 	M
+        ·ªôt ng∆∞·ªùi ƒëi xe ƒë·∫°p v·ªõi t·ªëc ƒë·ªô $v_1=\SI{5}{\meter/\se...
+<figs/G10Y25B4-6.jpg, id=167, 594.0594pt x 167.6664pt>
+File: figs/G10Y25B4-6.jpg Graphic file (type jpg)
+<use figs/G10Y25B4-6.jpg>
+Package pdftex.def Info: figs/G10Y25B4-6.jpg  used on input line 612.
+(pdftex.def)             Requested size: 297.02898pt x 83.83298pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{ex.2}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.623 	M
+        ·ªôt m√°y bay ƒëang bay theo h∆∞·ªõng B·∫Øc v·ªõi v·∫≠n t·ªëc $\SI{2...
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+File: logo/logocut.jpg Graphic file (type jpg)
+<use logo/logocut.jpg>
+Package pdftex.def Info: logo/logocut.jpg  used on input line 640.
+(pdftex.def)             Requested size: 42.67912pt x 42.67886pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T5/qag/m/n/10 ThΩch sË n†o gÂi sË ^^_‚\U/fontawesometwo/m/n/10 ‘[][]
+ []
+
+[12 <./figs/G10Y25B4-6.jpg>]
+Overfull \hbox (1.0pt too wide) in paragraph at lines 643--643
+|[][]
+ []
+
+Output from handle ans going to ans/G10Y25B4-TL.tex
+\openout8 = `ans/G10Y25B4-TL.tex'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{ex.1}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.647 	B
+        i·∫øt $\vec{d_1}$ l√† ƒë·ªô d·ªãch chuy·ªÉn $\SI{10}{\meter}$ v·ªÅ p...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ex.2}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.670 	M
+        ·ªôt √¥ t√¥ A ch·∫°y ƒë·ªÅu tr√™n m·ªôt ƒë∆∞·ªùng th·∫≥ng v·ªõi v·∫≠...
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+File: logo/logocut.jpg Graphic file (type jpg)
+<use logo/logocut.jpg>
+Package pdftex.def Info: logo/logocut.jpg  used on input line 686.
+(pdftex.def)             Requested size: 42.67912pt x 42.67886pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T5/qag/m/n/10 ThΩch sË n†o gÂi sË ^^_‚\U/fontawesometwo/m/n/10 ‘[][]
+ []
+
+[13]
+pdfTeX warning (ext4): destination with the same identifier (name{ex.3}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.689 	T
+        r√™n ƒëo√†n t√†u ƒëang ch·∫°y th·∫≥ng v·ªõi t·ªëc ƒë·ªô $\SI{36}{\ki...
+<figs/G10Y25B4-2.jpg, id=188, 198.7425pt x 109.6095pt>
+File: figs/G10Y25B4-2.jpg Graphic file (type jpg)
+<use figs/G10Y25B4-2.jpg>
+Package pdftex.def Info: figs/G10Y25B4-2.jpg  used on input line 691.
+(pdftex.def)             Requested size: 198.742pt x 109.6092pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{ex.4}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.721 	M
+        ·ªôt ng∆∞·ªùi b∆°i trong b·ªÉ b∆°i y√™n l·∫∑ng c√≥ th·ªÉ ƒë·∫°t t·ªõ...
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+File: logo/logocut.jpg Graphic file (type jpg)
+<use logo/logocut.jpg>
+Package pdftex.def Info: logo/logocut.jpg  used on input line 745.
+(pdftex.def)             Requested size: 42.67912pt x 42.67886pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T5/qag/m/n/10 ThΩch sË n†o gÂi sË ^^_‚\U/fontawesometwo/m/n/10 ‘[][]
+ []
+
+[14 <./figs/G10Y25B4-2.jpg>]
+pdfTeX warning (ext4): destination with the same identifier (name{ex.5}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.748 	M
+        ·ªôt ca n√¥ ch·∫°y h·∫øt t·ªëc l·ª±c tr√™n m·∫∑t n∆∞·ªõc y√™n l·∫∑ng...
+
+pdfTeX warning (ext4): destination with the same identifier (name{ex.6}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.788 	M
+        ·ªôt ca n√¥ ch·∫°y trong h·ªì n∆∞·ªõc y√™n l·∫∑ng c√≥ t·ªëc ƒë·ªô t·...
+<figs/G10Y25B4-3.jpg, id=197, 93.951pt x 164.41425pt>
+File: figs/G10Y25B4-3.jpg Graphic file (type jpg)
+<use figs/G10Y25B4-3.jpg>
+Package pdftex.def Info: figs/G10Y25B4-3.jpg  used on input line 808.
+(pdftex.def)             Requested size: 93.95078pt x 164.41383pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+File: logo/logocut.jpg Graphic file (type jpg)
+<use logo/logocut.jpg>
+Package pdftex.def Info: logo/logocut.jpg  used on input line 808.
+(pdftex.def)             Requested size: 42.67912pt x 42.67886pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T5/qag/m/n/10 ThΩch sË n†o gÂi sË ^^_‚\U/fontawesometwo/m/n/10 ‘[][]
+ []
+
+[15]
+pdfTeX warning (ext4): destination with the same identifier (name{ex.7}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.812 	M
+        ·ªôt ng∆∞·ªùi b∆°i t·ª´ b·ªù n√†y sang b·ªù kia c·ªßa m·ªôt con s√¥n...
+<figs/G10Y25B4-4.png, id=202, 99.9735pt x 129.48375pt>
+File: figs/G10Y25B4-4.png Graphic file (type png)
+<use figs/G10Y25B4-4.png>
+Package pdftex.def Info: figs/G10Y25B4-4.png  used on input line 825.
+(pdftex.def)             Requested size: 69.98096pt x 90.63799pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{ex.8}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.828 	M
+        ·ªôt ng∆∞·ªùi ch√®o thuy·ªÅn qua m·ªôt con s√¥ng r·ªông $\SI{400}{\m...
+<figs/G10Y25B4-5.png, id=203, 199.34476pt x 112.0185pt>
+File: figs/G10Y25B4-5.png Graphic file (type png)
+<use figs/G10Y25B4-5.png>
+Package pdftex.def Info: figs/G10Y25B4-5.png  used on input line 830.
+(pdftex.def)             Requested size: 139.54036pt x 78.4124pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+File: logo/logocut.jpg Graphic file (type jpg)
+<use logo/logocut.jpg>
+Package pdftex.def Info: logo/logocut.jpg  used on input line 831.
+(pdftex.def)             Requested size: 42.67912pt x 42.67886pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T5/qag/m/n/10 ThΩch sË n†o gÂi sË ^^_‚\U/fontawesometwo/m/n/10 ‘[][]
+ []
+
+[16 <./figs/G10Y25B4-3.jpg> <./figs/G10Y25B4-4.png>])
+>>>>>>> Stashed changes
 \tf@thm=\write9
 \openout9 = `MAIN.thm'.
 
@@ -2630,14 +3130,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: logo/logocut.jpg Graphic file (type jpg)
 <use logo/logocut.jpg>
-Package pdftex.def Info: logo/logocut.jpg  used on input line 105.
-(pdftex.def)             Requested size: 42.67912pt x 42.58736pt.
+Package pdftex.def Info: logo/logocut.jpg  used on input line 109.
+(pdftex.def)             Requested size: 42.67912pt x 42.67886pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
  [][][][]\T5/qag/m/n/10 ThΩch sË n†o gÂi sË ^^_‚\U/fontawesometwo/m/n/10 ‘[][]
  []
 
+<<<<<<< Updated upstream
 [7] 
+=======
+[17 <./figs/G10Y25B4-5.png>]
+
+>>>>>>> Stashed changes
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./MAIN.aux)
  ***********
@@ -2646,13 +3151,10 @@ L3 programming layer <2020/03/25>
  ***********
 
 
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 1.28pt have occurred.
-
-
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `MAIN.out' has not changed.
+<<<<<<< Updated upstream
 (rerunfilecheck)             Checksum: 0AF731472A2963660515A76E85C53E68;591.
  ) 
 Here is how much of TeX's memory you used:
@@ -2681,4 +3183,39 @@ PDF statistics:
  165 compressed objects within 2 object streams
  50 named destinations out of 1000 (max. 500000)
  218 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+(rerunfilecheck)             Checksum: 73A6F1FFCD37196B1D488FFD10E0CD2F;281.
+ ) 
+Here is how much of TeX's memory you used:
+ 62767 strings out of 473201
+ 1446957 string characters out of 5720300
+ 2406082 words of memory out of 5000000
+ 84705 multiletter control sequences out of 15000+600000
+ 634501 words of font info for 142 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 107i,25n,133p,1218b,2569s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb><c
+:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive
+/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10
+.pfb><c:/texlive/2024/texmf-dist/fonts/type1/vntex/vntopia/putb8v.pfb><c:/texli
+ve/2024/texmf-dist/fonts/type1/public/tex-gyre/qagb.pfb><c:/texlive/2024/texmf-
+dist/fonts/type1/public/tex-gyre/qagr.pfb><c:/texlive/2024/texmf-dist/fonts/typ
+e1/vntex/grotesqvn/ugqb8v.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/es
+vect/vect10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb><c
+:/texlive/2024/texmf-dist/fonts/type1/vntex/vnr/vnbxti10.pfb><c:/texlive/2024/t
+exmf-dist/fonts/type1/vntex/vnr/vnr12.pfb><c:/texlive/2024/texmf-dist/fonts/typ
+e1/vntex/vnr/vnr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/vntex/vnr/vnti12.
+pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
+Output written on MAIN.pdf (17 pages, 1439630 bytes).
+PDF statistics:
+ 330 PDF objects out of 1000 (max. 8388607)
+ 229 compressed objects within 3 object streams
+ 77 named destinations out of 1000 (max. 500000)
+ 225 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> Stashed changes
 
